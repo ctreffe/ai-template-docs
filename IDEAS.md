@@ -202,3 +202,51 @@ otherwise it remains a `Pending Idea Transfer`.
   `.agents/skills/start-project/SKILL.md`, `.agents/skills/grill-me/SKILL.md`,
   `.agents/skills/grilling/SKILL.md`, `PROJECT_SETUP.md` and `DOCUMENTS.md`;
   Governance TVDR-0049 records the accepted document-local opt-in contract.
+
+### IDEA-0005: Adversarial document review with review-document
+
+- **Status:** Promoted
+- **Source:** Maintainer proposal on 2026-10-11; explicitly authorized backlog
+  capture, followed by selected implementation under Governance TVDR-0057
+- **Opportunity:** Add a `review-document` skill that critically examines an
+  entire document or a selected section without requiring an external feedback
+  document. Adopt an adversarial reviewer perspective inspired by `grill-me`:
+  actively look for substantive weaknesses in content, reasoning, logical
+  coherence, assumptions, structure, presentation, audience fit and language.
+  For technical documentation, also examine technical correctness against
+  available authorized evidence, completeness, prerequisites, terminology,
+  procedural order and whether the intended reader can follow the explanation
+  or instructions successfully.
+- **Recurrence:** Documentation needs independent critique before external
+  review and during revisions, for individual sections and complete documents
+  across different audiences and document types.
+- **Reusable elements:** Assess the critical questioning stance of `grill-me`
+  and `grilling`, document-local contracts and audience/style guidance, and
+  `revise-document`'s distinction between feedback and accepted revisions.
+  Produce prioritized, passage-specific findings explaining the weakness and
+  offering actionable improvements, optionally including example wording or
+  a clearer information structure. Identify missing context and evidence
+  needed to resolve uncertain findings.
+- **Benefit:** Exposes misleading explanations, gaps, contradictions and
+  unclear language early, with concrete options to improve the document.
+- **Risk:** An adversarial stance can invent objections, confuse preference
+  with error or claim technical verification without supporting evidence.
+  Reviewing one section can miss context supplied elsewhere in the document.
+- **Boundaries:** Criticism should be rigorous, fair and grounded in the
+  selected text, not hostile or manufactured to fill a quota. Distinguish
+  demonstrated problems, plausible concerns and preferences; state scope and
+  limits. Use only authorized sources and keep technical truth and publication
+  decisions with the maintainer. Review produces feedback; maintained-source
+  edits require a separately requested revision. `revise-document` remains the
+  route for evaluating annotated external feedback and transferring accepted
+  changes. The analogy to grilling does not invoke either grilling skill.
+  Content review does not imply rendering or visual inspection; the existing
+  separate invocation boundaries remain. The implemented skill requires explicit
+  maintainer invocation and grants no additional access or publication authority.
+- **Next decision:** None for the selected implementation. Governance TVDR-0057
+  adopts the dimensions, prioritized finding format and bounded pass/recheck
+  defaults in the implemented skill. Actual document use remains a later task.
+- **References:** [review-document](.agents/skills/review-document/SKILL.md),
+  Governance TVDR-0057, `.agents/skills/revise-document/SKILL.md`,
+  `.agents/skills/grill-me/SKILL.md`, `.agents/skills/grilling/SKILL.md`,
+  `DOCUMENTS.md`, `AGENTS.md` and `COLLABORATION.md`

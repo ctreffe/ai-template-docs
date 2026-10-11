@@ -196,6 +196,7 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`add-document`](.agents/skills/add-document/SKILL.md) | Explizit | Ergänzt ein gepflegtes Dokument oder verknüpfte Sprachfassungen einschließlich Katalogmetadaten und Navigation. |
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
+| [`review-document`](.agents/skills/review-document/SKILL.md) | Explizit | Prüft ein Dokument oder einen Abschnitt kritisch auf Korrektheit, erfolgreiche Bearbeitung der Leseraufgaben und Verständlichkeit; liefert belegte Befunde und Verbesserungsvorschläge. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explizit | Prüft benannte aktuelle HTML-, PDF- oder DOCX-Renderings visuell und berichtet genauen Prüfumfang und Grenzen. |
 | [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Meilenstein mit Metadaten, umfassenden Prüfungen, Commit, annotiertem Versionstag und gezielten Upstream-Pushes ab, sofern nicht ausgeschlossen. |
 

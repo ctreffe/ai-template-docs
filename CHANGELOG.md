@@ -4,6 +4,10 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Under Governance TVDR-0057, add explicit-only review-document for technical
+  document critique with reader-task, correctness and clarity findings. Promote
+  IDEA-0005; preserve separate revision, rendering and visual-inspection routes.
+
 - Add explicit-only manage-external-storage with domain guidance, a read-only
   selected-file helper and synthetic checks under Governance TVDR-0056.
   Ordinary task entry, initialization and handoff add no storage checks.

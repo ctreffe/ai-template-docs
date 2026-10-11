@@ -186,6 +186,7 @@ read only a matching detail section when needed.
 | [`add-document`](.agents/skills/add-document/SKILL.md) | Explicit | Add a maintained document or linked language versions, including catalog metadata and navigation. |
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Task-driven or explicit | Render maintained Quarto sources in the required formats and check technical output and placement. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explicit | Evaluate authorized annotated DOCX or PDF feedback and transfer accepted revisions into maintained sources. |
+| [`review-document`](.agents/skills/review-document/SKILL.md) | Explicit | Critically review a document or section for correctness, reader success and clarity; return grounded findings and improvement proposals. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explicit | Inspect named current HTML, PDF or DOCX renders visually and report exact coverage and limits. |
 | [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explicit | Close a reviewed milestone with metadata, comprehensive checks, a commit, annotated version tag and exact upstream pushes unless excluded. |
 
