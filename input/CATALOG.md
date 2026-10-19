@@ -13,3 +13,7 @@ Use stable public URLs directly and logical locations for private or
 device-specific sources. Resolve logical locations in `PATHS.local.md`, copied
 from the example. Never record credentials or private tokens. A catalog entry
 grants no additional access or publication permission.
+
+Assign these IDs to documents in their shared `DOCUMENT_CONTEXT.md`, with
+intended use and evidence baseline. Keep a shared source here once even when
+several documents use it; newly researched/derived files belong in `materials/`.

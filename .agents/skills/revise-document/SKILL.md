@@ -8,7 +8,8 @@ description: Evaluate an authorized annotated DOCX or PDF review and transfer ac
 Confirm assistant access to the exact annotated review file and identify the
 authoritative maintained source plus the reviewed output baseline. Keep the
 review file unchanged and apply local sensitivity, reviewer-identity and
-publication boundaries.
+publication boundaries. Resolve the source through `DOCUMENTS.md` and read
+its shared `DOCUMENT_CONTEXT.md` for the assembly rules and evidence baseline.
 
 Extract comments, Track Changes or PDF annotations and classify them as clear
 maintainer instruction, maintainer-framed external feedback, unresolved
@@ -18,7 +19,9 @@ automatic authority.
 
 Transfer only accepted revisions into maintained source, preserve traceability
 to the reviewed baseline and update durable decisions when the revision changes
-an established rule. Run the repository's applicable render and validation
+an established rule. Update the context when accepted revisions change its
+assembly/update procedure, source assignments or evidence baseline. Run the
+repository's applicable render and validation
 workflow, distinguishing technical rendering, content review, separately
 invoked visual inspection and publication approval. Report incorporated,
 deferred and rejected items plus checks and remaining limitations.

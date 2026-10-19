@@ -163,7 +163,8 @@ Relevant never-versioned temporary work outside `temp/restricted/`:
 
 Document catalog:
 
-- `DOCUMENTS.md` - document-local contracts, lifecycle and next actions
+- `DOCUMENTS.md` - document index, context/source paths and lifecycle status
+- Document-specific context - local contract, assigned evidence, assembly/update rules and next action
 
 Planned structure:
 
@@ -216,7 +217,10 @@ Link check expectations:
 - `$check-consistency` - internal documentation consistency diagnosis
 - `$perform-retrospective` - structured documentation-collaboration review
 - `DOCS_SETUP.md` - documentation setup and current model
-- `DOCUMENTS.md` - maintained document catalog and document-local contracts
+- `DOCUMENTS.md` - compact maintained-document index and context paths
+- `docs/<document-slug>/DOCUMENT_CONTEXT.md` - document contract, assigned evidence and assembly/update method, shared across language versions
+- `templates/` - reusable document-context and research-report scaffolds
+- `$investigate-question` - concrete practical questions, saved research reports and optional data materials
 - `DOCUMENTATION_PROCESS.md` - ongoing documentation workflow
 - `FEEDBACK_WORKFLOW.md` - direct-source, DOCX and PDF review workflow
 - `AUDIENCE.md` - audience assumptions

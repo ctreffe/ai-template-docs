@@ -1,11 +1,12 @@
 # Document Catalog
 
-This catalog is the durable index of maintained documents in a derived
-documentation project. Project-wide defaults remain authoritative in
-`PROJECT_CONTEXT.md`; each entry records only the confirmed document-local
-contract and identifies every inherited default explicitly.
+This catalog is the compact index of maintained documents in a derived
+documentation project. Project-wide defaults remain in `PROJECT_CONTEXT.md`.
+Each document or language-linked set has one `DOCUMENT_CONTEXT.md` containing
+its confirmed local contract, source assignments and assembly/update procedure.
+Use [the context scaffold](templates/DOCUMENT_CONTEXT.md).
 
-`$start-project` completes the initial entry. Invoke `$add-document` explicitly
+`$start-project` creates the initial entry and context. Invoke `$add-document` explicitly
 for each later document or language-linked document set. A catalog entry does
 not by itself authorize access to source material, Git versioning, rendering or
 publication.
@@ -20,26 +21,22 @@ Use the maintainer-approved project lifecycle, normally `planned`, `draft`,
 `review`, `stable` or `archived`. Record the current state here; history belongs
 in the changelog or an applicable Decision Record.
 
-## Entry contract
+## Document folders and entry contract
 
-Copy this section once per maintained document or language-linked set. Replace
-every `TBD`; write `Inherited from PROJECT_CONTEXT.md: <field>` only when the
-project default was reviewed and accepted for this document.
+Normally keep each document's sources, chapters and shared context in
+`docs/<document-slug>/`. Linked language versions share the folder, ID and
+context. Root `docs/index*.qmd` may remain project navigation pages; a maintained
+document at another agreed path still needs its own context pointer. Internal
+contexts must not be rendered or included as publication resources.
+
+Copy this entry once per maintained document or language-linked set. Replace
+required `TBD`s and verify ID/path uniqueness. Put detailed decisions and next
+actions in the context, not a second copy here. Mark inherited project defaults
+as reviewed references there; catalog status is authoritative here.
 
 ### DOC-0001: TBD title
 
 - Document ID: `DOC-0001`
+- Context path: `docs/<document-slug>/DOCUMENT_CONTEXT.md`
 - Maintained source path or language-linked paths: TBD
-- Purpose: TBD
-- In scope: TBD
-- Out of scope: TBD
-- Dominant documentation type profile: TBD
-- Primary audience and reader task: TBD
-- Language relationship and authoritative language: TBD
-- Required and permitted output formats: TBD
-- Source, assistant-access and sensitivity constraints: TBD
-- Navigation placement: TBD
-- Validation and review expectations: TBD
 - Lifecycle status: TBD
-- Next action: TBD
-- Relevant Decision Records: none or TBD

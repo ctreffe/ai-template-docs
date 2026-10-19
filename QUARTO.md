@@ -37,7 +37,16 @@ _quarto.yml
 docs/
   index.qmd
   index.de.qmd
+  <document-slug>/
+    DOCUMENT_CONTEXT.md
+    index.qmd
+    index.de.qmd
+templates/
+  DOCUMENT_CONTEXT.md
+  RESEARCH_REPORT.md
 materials/
+  local/
+    research/
   versioned/
 styles/
 output/
@@ -50,8 +59,11 @@ binary documentation material approved for Git, while `styles/` contains
 presentation source when needed. Generated formats remain below ignored
 `output/` in separate format directories.
 
-`DOCUMENTS.md` catalogs each maintained document or language-linked document
-set. Add later documents through the explicit `$add-document` workflow so
+`DOCUMENTS.md` indexes each maintained document or language-linked document
+set and its shared context. Normally group its chapters and language versions
+under `docs/<document-slug>/`; root entry pages can remain project navigation.
+`DOCUMENT_CONTEXT.md` records authoring/assembly/update guidance, not reader
+content. Add later documents through the explicit `$add-document` workflow so
 source paths, language relationships, navigation and required formats remain
 consistent with the project configuration.
 
@@ -61,9 +73,19 @@ The default render scope is limited to Quarto source files in `docs/`:
 project:
   render:
     - docs/**/*.qmd
+    - "!docs/**/DOCUMENT_CONTEXT.md"
 ```
 
 This prevents repository governance files such as `README.md`, `COLLABORATION.md`, or `PROJECT_CONTEXT.md` from being rendered as website pages by default.
+
+Do not add internal contexts, report scaffolds, saved research reports or
+unapproved data to navigation, includes, listings or resource bundles. A render
+exclusion is not a resource-copying boundary: Quarto can copy files referenced
+by published pages ([site resources](https://quarto.org/docs/websites/website-tools.html#site-resources)).
+Keep internal references in the context/report rather than linking those files
+from reader pages. When adapting render/resource scope, verify actual outputs
+for unintended working files. Publish a deliberately prepared reader-facing
+summary or approved data export only through the separate publication workflow.
 
 ## Executable source readability
 

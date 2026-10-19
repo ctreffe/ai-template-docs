@@ -124,7 +124,10 @@ Define the review model according to `FEEDBACK_WORKFLOW.md`:
 Before the first substantive documentation milestone, the repository should contain:
 
 - Completed `PROJECT_CONTEXT.md`.
-- Completed initial document contract in `DOCUMENTS.md`.
+- Completed initial entry in `DOCUMENTS.md` and shared document context from
+  `templates/DOCUMENT_CONTEXT.md` under `docs/<document-slug>/`.
+- Assembly/update rules, assigned source IDs and evidence baseline recorded
+  as they become known; unresolved nonessential details explicitly deferred.
 - Selected documentation type profile and language model.
 - Confirmed Quarto model and output formats.
 - Confirmed feedback channels, file scope and review-handling rules.

@@ -94,7 +94,7 @@ Der Agent:
 4. wahrt Quellen-, Screenshot-, Feedback-, Render- und Publikationsgrenzen und
    lässt nicht wesentliche Entscheidungen ausdrücklich offen;
 5. passt nur die Setup-, Zielgruppen-, README-, Quarto-, Quellen- und Navigationsdateien an, die für das erste nützliche Ergebnis nötig sind;
-6. hält dessen ersten Dokumentvertrag in `DOCUMENTS.md` sowie die aktuelle Quellengrenze und Template-Provenienz in `PROJECT_CONTEXT.md` fest;
+6. hält dessen ersten Indexeintrag in `DOCUMENTS.md`, den gemeinsamen Dokumentvertrag in `DOCUMENT_CONTEXT.md` sowie die aktuelle Quellengrenze und Template-Provenienz in `PROJECT_CONTEXT.md` fest;
 7. rendert oder inspiziert visuell nur, wenn das angeforderte Artefakt oder ein notwendiger Nachweis dies erfordert; und
 8. übergibt den initialisierten Stand mit angemessenen Prüfungen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
@@ -132,7 +132,8 @@ Fortsetzung nach unterbrochenem Setup.
 Ein initialisiertes Projekt kann ein Ein-Dokument-Projekt bleiben oder zu einem
 Multi-Dokument-Satz wachsen. Rufe `$add-document` für jedes zusätzliche
 gepflegte Dokument oder jeden sprachlich verknüpften Dokumentensatz ausdrücklich
-auf. Der Ablauf bestätigt dessen dokumentlokalen Vertrag in `DOCUMENTS.md`,
+auf. Der Ablauf bestätigt dessen dokumentlokalen Vertrag in einer gemeinsamen
+`docs/<dokumentname>/DOCUMENT_CONTEXT.md`, ergänzt den kompakten Indexeintrag in `DOCUMENTS.md`,
 weist Pfad- und ID-Kollisionen zurück und aktualisiert vereinbarte
 Quellgerüste oder Navigation, ohne die Projektinitialisierung erneut
 auszuführen. Rendering, Publikation und Git-Aktionen bleiben getrennt.
@@ -142,6 +143,33 @@ für das neue Dokument. Das Interview behandelt nur unbeantwortete Entscheidunge
 zum Dokument und bewusste Abweichungen von geprüften Projektvorgaben. Du kannst
 zum schlanken Weg zurückkehren; Änderungen warten auf ein bestätigtes gemeinsames
 Verständnis.
+
+Zusammengehörige Sprachfassungen und Kapitel teilen einen Kontext. Nutze
+[die Kontextvorlage](templates/DOCUMENT_CONTEXT.md), um Zweck, Hintergrund,
+geprüfte Vorgaben, zugeordnete Quellen-/Material-IDs und insbesondere die
+Zusammenstellung festzuhalten: Auswahl- und Verarbeitungsregeln, verwendete
+Quellenstände und wiederholbare Aktualisierungsschritte. Lies den Kontext vor
+späteren Aktualisierungen und halte akzeptierte Regel- und Quellenstandänderungen
+darin aktuell. Gemeinsame Quellen bleiben zentral katalogisiert; mehrere
+Dokumente können dieselben IDs verwenden. Interne Kontexte bleiben außerhalb
+gerenderter Seiten und publizierter Ressourcen.
+
+`add-document` befüllt den Kontext aus bestätigten Setup-Entscheidungen, offenen
+Fragen und dem nächsten Schritt. `start-task` liest diesen Stand; `handoff-task`
+aktualisiert jeden betroffenen Kontext vor dem Ersetzen des Aufgabencheckpoints
+und verweist darauf. Dokumentbezogene Folgeaufgaben können nach Abschluss einer
+Aufgabe offen bleiben.
+
+Rufe `$investigate-question` für praxisbezogene Recherche gezielt beim Namen
+auf. Operationalisiere ein Thema vor der Suche zu einer konkreten Frage oder
+einem abgegrenzten Satz vorzugsweise zusammenhängender Fragen. Der Skill
+speichert einen [strukturierten Bericht](templates/RESEARCH_REPORT.md),
+normalerweise unter ignoriertem `materials/local/research/`, mit Antwort und
+Belegen/Unsicherheiten je Frage, Quellenbewertung, Methode, Lücken und
+Aktualisierungsbedingungen. Optionale Datendateien behalten Schema und
+Provenienz. Berichte/Daten sind katalogisierte Materialien, die über die
+Dokumentkontexte zugeordnet werden; ihre Ergebnisse werden nicht automatisch
+in den Dokumenttext übernommen.
 
 ## Skills für die Zusammenarbeit
 
@@ -197,6 +225,7 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explizit | Wertet freigegebenes kommentiertes DOCX- oder PDF-Feedback aus und überträgt akzeptierte Revisionen in gepflegte Quellen. |
 | [`review-document`](.agents/skills/review-document/SKILL.md) | Explizit | Prüft ein Dokument oder einen Abschnitt kritisch auf Korrektheit, erfolgreiche Bearbeitung der Leseraufgaben und Verständlichkeit; liefert belegte Befunde und Verbesserungsvorschläge. |
+| [`investigate-question`](.agents/skills/investigate-question/SKILL.md) | Explizit | Recherchiert konkrete Projektfragen, bewertet jede verwendete Quelle und speichert einen [Recherchebericht](templates/RESEARCH_REPORT.md) mit optionalen Daten. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explizit | Prüft benannte aktuelle HTML-, PDF- oder DOCX-Renderings visuell und berichtet genauen Prüfumfang und Grenzen. |
 | [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explizit | Schließt einen geprüften Meilenstein mit Metadaten, umfassenden Prüfungen, Commit, annotiertem Versionstag und gezielten Upstream-Pushes ab, sofern nicht ausgeschlossen. |
 
@@ -351,8 +380,13 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 - **`README.md` und `README.de.md`** erklären Template, initiales Setup und laufende Nutzung auf Englisch und Deutsch.
 - **`PROJECT_CONTEXT.md`** hält Dokumentationszweck, Zielgruppe, Quellen- und Sensitivitätsmodell, aktuelle Arbeit, Roadmap, Review-Zustand und nächste Sitzung fest. Sie ist der primäre Wiedereinstiegspunkt und kein Ersatz für die Dokumentation selbst.
 - **`DOCUMENTS.md`** katalogisiert jedes gepflegte Dokument oder jeden
-  sprachlich verknüpften Satz, seine geprüfte Übernahme von Projekt-Defaults,
-  seinen Lebenszyklus und seine nächste Aktion.
+  sprachlich verknüpften Satz, seine Quellen-/Kontextpfade und seinen Lebenszyklusstatus.
+- **`DOCUMENT_CONTEXT.md`** im jeweiligen Dokumentordner enthält den lokalen
+  Vertrag, geprüfte Vorgaben, zugeordnete Belege und das Zusammenstellungs- und
+  Aktualisierungsverfahren; Sprachfassungen teilen die Datei.
+  [Vorlage](templates/DOCUMENT_CONTEXT.md).
+- **`templates/RESEARCH_REPORT.md`** strukturiert gespeicherte Recherche je
+  Frage, Quellenbewertungen, Methoden und Datenprovenienz.
 - **`CHANGELOG.md` und `VERSION`** dokumentieren abgeschlossene Template- oder Dokumentations-Milestones. Sie sollen einen geprüften Zustand abbilden und nicht Arbeit, die lediglich begonnen wurde.
 
 ### Zusammenarbeit, Setup und Prozess
@@ -384,7 +418,7 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
 ### Quarto-Quellen, Materialien, Outputs und Review-Dateien
 
 - **`_quarto.yml`** definiert Dokumentationswebsite, Navigation, Output-Verzeichnis und Renderumfang. Abgeleitete Projekte passen Titel, Seiten, Sprachen und erforderliche Formate an.
-- **`docs/`** enthält die gepflegten Quarto-Dokumentationsquellen einschließlich englischer und deutscher Einstiegsseiten in der Baseline. Diese Quellen sind gegenüber gerenderten Outputs maßgeblich.
+- **`docs/`** enthält gepflegte Quarto-Quellen, Projekteinstiegsseiten und normalerweise einen Ordner pro Dokument/Satz mit internem Kontext. Die Quellen sind gegenüber gerenderten Outputs maßgeblich; Kontexte bleiben außerhalb publizierter Ressourcen.
 - **`input/`** klassifiziert eingehende externe Dateien und dokumentiert ihre Provenienz, bevor sie in gepflegte Dokumentationsworkflows gelangen.
 - **`materials/`** katalogisiert dauerhafte, für den Assistant lesbare
   Dokumentations-Arbeitsdateien in lokaler, versionierter oder externer
@@ -408,7 +442,7 @@ In einem abgeleiteten Dokumentationsprojekt:
 - ersetze Platzhalter für Identität, Zielgruppe und Dokumentationsseiten durch konkrete Projektinhalte;
 - behalte `AGENTS.md` als automatischen Agenten-Einstiegspunkt und passe die Datei an;
 - vervollständige `DOCS_SETUP.md`, `AUDIENCE.md`, `PROJECT_CONTEXT.md` und den
-  initialen Eintrag in `DOCUMENTS.md`;
+  initialen Eintrag in `DOCUMENTS.md` mit seinem gemeinsamen Dokumentkontext;
 - passe `_quarto.yml`, `docs/`, Stil-, Link-, Screenshot- und Leitlinien zur visuellen Inspektion an;
 - behalte `PROJECT_SETUP.md` als Initialisierungsprovenienz;
 - behalte die anwendbaren Repository-Skills für spätere Abläufe;

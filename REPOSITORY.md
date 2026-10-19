@@ -14,7 +14,10 @@ documentation and read-only Git evidence.
 - `COLLABORATION.md`: AI collaboration model.
 - `PROJECT_SETUP.md`: Initialization workflow.
 - `DOCS_SETUP.md`: Documentation setup checklist.
-- `DOCUMENTS.md`: Maintained document catalog and document-local contracts.
+- `DOCUMENTS.md`: Compact document index, context/source paths and lifecycle.
+- `docs/<document-slug>/DOCUMENT_CONTEXT.md`: Shared language-set contract,
+  assigned evidence and repeatable assembly/update rules.
+- `templates/`: Context and research-report scaffolds.
 - `PROJECT_CONTEXT.md`: Project-specific context template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing process.
 - `AUDIENCE.md`: Audience model.
@@ -77,6 +80,12 @@ in `styles/`, and returned annotated review files in `review/`. Generated HTML,
 PDF, DOCX and other results belong below ignored `output/` in a directory named
 for their format. Moving an approved file into a maintained location records
 its Git and project role but does not grant publication rights.
+
+Normally group each maintained document and its language versions/chapters in
+`docs/<document-slug>/`, with a shared internal `DOCUMENT_CONTEXT.md`. The
+context preserves its contract, assigned catalog IDs and assembly/update rules;
+`DOCUMENTS.md` indexes it. Keep contexts out of publication resources. Research
+reports and generated datasets are retained materials, not reader documents.
 
 Assistant access, Git versioning and publication or other sharing are separate
 decisions. Before preparing a commit, review new and untracked files for

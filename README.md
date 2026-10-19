@@ -93,7 +93,7 @@ The agent then:
 4. preserves source, screenshot, feedback, rendering and publication gates
    while allowing nonessential decisions to remain explicitly deferred;
 5. adapts only the setup, audience, README, Quarto, source and navigation files needed for the first useful outcome;
-6. records its initial document contract in `DOCUMENTS.md` and the current source boundary and template provenance in `PROJECT_CONTEXT.md`;
+6. records its initial index entry in `DOCUMENTS.md`, its shared document contract in `DOCUMENT_CONTEXT.md` and the current source boundary and template provenance in `PROJECT_CONTEXT.md`;
 7. renders or visually inspects only when the requested artifact or necessary evidence requires it; and
 8. hands back the initialized state with proportionate checks, unresolved decisions and suggested commit metadata.
 
@@ -128,7 +128,8 @@ for the initialization and interrupted-setup contract.
 An initialized project may remain a one-document project or grow into a
 multi-document set. Invoke `$add-document` explicitly for each additional
 maintained document or language-linked document set. The workflow confirms its
-document-local contract in `DOCUMENTS.md`, rejects path and ID collisions and
+document-local contract in a shared `docs/<document-slug>/DOCUMENT_CONTEXT.md`,
+adds the compact index entry in `DOCUMENTS.md`, rejects path and ID collisions and
 updates agreed source skeletons or navigation without rerunning project
 initialization. Rendering, publication and Git actions remain separate.
 
@@ -136,6 +137,30 @@ Choose normal lean setup or explicitly opt into a `grill-me` interview for the
 new document. The interview explores only unanswered document-local decisions
 and deliberate departures from reviewed project defaults. You may return to
 the lean path; changes wait for confirmed shared understanding.
+
+Linked language versions and chapters share one context. Use
+[the context scaffold](templates/DOCUMENT_CONTEXT.md) to retain purpose,
+background, reviewed defaults, assigned source/material IDs and, especially,
+how the document was assembled: selection and processing rules, evidence
+baselines and repeatable update steps. Read it before later updates and keep
+accepted rule/baseline changes current there. Shared sources remain centrally
+cataloged; several documents can use the same IDs. Internal contexts are kept
+out of rendered pages and publication resources.
+
+`add-document` fills the context from confirmed setup choices, open questions
+and the next action. `start-task` reads that state; `handoff-task` refreshes each
+affected context before replacing the task checkpoint and links back to it.
+Document follow-ups can remain open after a task is completed.
+
+Invoke `$investigate-question` by name for practical research. Operationalize a
+topic into one concrete question or a bounded set of preferably related
+questions before searching. The skill saves a
+[structured report](templates/RESEARCH_REPORT.md), normally under ignored
+`materials/local/research/`, with an answer and support/uncertainty for each
+question, source credibility, methods, gaps and refresh conditions. Optional
+data files retain schema and provenance. Reports/data are cataloged materials
+assigned through document contexts; their findings are not automatically
+accepted into document prose.
 
 ## Collaboration Skills
 
@@ -187,6 +212,7 @@ read only a matching detail section when needed.
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Task-driven or explicit | Render maintained Quarto sources in the required formats and check technical output and placement. |
 | [`revise-document`](.agents/skills/revise-document/SKILL.md) | Explicit | Evaluate authorized annotated DOCX or PDF feedback and transfer accepted revisions into maintained sources. |
 | [`review-document`](.agents/skills/review-document/SKILL.md) | Explicit | Critically review a document or section for correctness, reader success and clarity; return grounded findings and improvement proposals. |
+| [`investigate-question`](.agents/skills/investigate-question/SKILL.md) | Explicit | Investigate concrete project questions, assess each used source and save a [research report](templates/RESEARCH_REPORT.md) with optional data. |
 | [`visual-inspection`](.agents/skills/visual-inspection/SKILL.md) | Explicit | Inspect named current HTML, PDF or DOCX renders visually and report exact coverage and limits. |
 | [`commit-milestone`](.agents/skills/commit-milestone/SKILL.md) | Explicit | Close a reviewed milestone with metadata, comprehensive checks, a commit, annotated version tag and exact upstream pushes unless excluded. |
 
@@ -334,7 +360,12 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 - **`README.md` and `README.de.md`** explain the template, initial setup and ongoing use in English and German.
 - **`PROJECT_CONTEXT.md`** records documentation purpose, audience, source and sensitivity model, current work, roadmap, review state and next session. It is the primary re-entry point rather than a substitute for the documentation itself.
 - **`DOCUMENTS.md`** catalogs each maintained document or language-linked set,
-  its reviewed project-default inheritance, lifecycle and next action.
+  its source/context paths and lifecycle status.
+- **`DOCUMENT_CONTEXT.md`** in each document folder owns its local contract,
+  reviewed defaults, assigned evidence and assembly/update procedure; linked
+  language versions share it. [Scaffold](templates/DOCUMENT_CONTEXT.md).
+- **`templates/RESEARCH_REPORT.md`** structures saved question-level research,
+  source assessments, methods and data provenance.
 - **`CHANGELOG.md` and `VERSION`** record completed template or documentation milestones. They should reflect a reviewed state rather than work that has merely begun.
 
 ### Collaboration, Setup and Process
@@ -365,7 +396,7 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
 ### Quarto Sources, Materials, Outputs and Review Files
 
 - **`_quarto.yml`** defines the documentation website, navigation, output directory and render scope. Derived projects adapt its title, pages, languages and required formats.
-- **`docs/`** contains the maintained Quarto documentation sources, including English and German entry pages in the baseline. These sources are authoritative over rendered output.
+- **`docs/`** contains maintained Quarto sources, project entry pages and normally one folder per document/set with its internal context. Sources are authoritative over rendered output; contexts stay outside publication resources.
 - **`input/`** classifies incoming external files and records their provenance before they enter maintained documentation workflows.
 - **`materials/`** catalogs retained assistant-readable documentation working
   files in local, versioned or external storage.
@@ -387,7 +418,7 @@ In a derived documentation project:
 - replace placeholder identity, audience and documentation pages with concrete project content;
 - retain and adapt `AGENTS.md` as the automatic agent entry point;
 - complete `DOCS_SETUP.md`, `AUDIENCE.md`, `PROJECT_CONTEXT.md` and the initial
-  `DOCUMENTS.md` entry;
+  `DOCUMENTS.md` entry with its shared document context;
 - adapt `_quarto.yml`, `docs/`, style, link, screenshot and visual-inspection guidance;
 - retain `PROJECT_SETUP.md` as initialization provenance;
 - retain the applicable repository skills for later workflows;

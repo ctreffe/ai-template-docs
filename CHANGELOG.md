@@ -4,6 +4,24 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Populate open questions and next actions through add-document; reconcile them
+  at start-task and refresh affected document contexts before handoff-task
+  replaces the task checkpoint, preserving unrelated document state.
+
+- Under Governance TVDR-0059, provide explicit-only investigate-question for
+  concrete questions or related sets, saved research reports, individually
+  traceable source assessments and optional provenance-aware data. Preserve
+  domain authority; no automatic existing-project adoption.
+
+- Under Governance TVDR-0058, add a shared DOCUMENT_CONTEXT.md scaffold per
+  document/language set, compact catalog pointers, explicit source assignments
+  and repeatable assembly/update rules. Route setup, continuation and document
+  workflows through the context while keeping it outside publication output.
+- Add deliberate named investigate-question for practical, operationalized
+  questions or connected question sets, with saved structured reports, source
+  credibility assessment and optional provenance-aware data files. Preserve
+  existing source/storage boundaries; existing derived projects are deferred.
+
 - Under Governance TVDR-0057, add explicit-only review-document for technical
   document critique with reader-task, correctness and clarity findings. Promote
   IDEA-0005; preserve separate revision, rendering and visual-inspection routes.

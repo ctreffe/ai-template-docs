@@ -31,8 +31,16 @@ the AI Guarded Agent Template this may be a fresh local control-plane clone.
    transmission or publication authority from a default or another answer.
 3. After the maintainer answers, apply safe repository and documentation
    defaults to nonessential undecided details and update the project-specific context,
-   `DOCUMENTS.md` initial document contract and documentation named by
-   `PROJECT_SETUP.md`. Record initialization status and date, source-template
+   `DOCUMENTS.md` initial index entry and its shared document context using
+   [the scaffold](../../../templates/DOCUMENT_CONTEXT.md), plus documentation
+   named by `PROJECT_SETUP.md`. Normally group sources/linked languages under
+   `docs/<document-slug>/` with one `DOCUMENT_CONTEXT.md`; keep root entry pages
+   for navigation when useful. Preserve unique IDs/paths and adapt relative
+   links/navigation. Fill the local contract from confirmed answers and
+   reviewed defaults; record assembly/update rules and source/report IDs as
+   they become known, deferring nonessential details without extra setup
+   questions. Exclude contexts from rendering and publication resources.
+   Record initialization status and date, source-template
    version and commit, synchronization baseline and intentional deviations.
    Before adapting README content, follow "Project READMEs and retained
    template guides" in `PROJECT_SETUP.md`: inspect all four paths, preserve

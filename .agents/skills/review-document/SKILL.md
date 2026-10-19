@@ -13,8 +13,9 @@ invent objections to meet a quota or invoke either grilling skill.
 ## Scope and evidence
 
 Identify maintained sources, the selected boundary and any requested focus or
-depth. Use the applicable entry in [DOCUMENTS.md](../../../DOCUMENTS.md) for
-the document-local contract and only relevant inherited defaults. Consult
+depth. Resolve the applicable entry in [DOCUMENTS.md](../../../DOCUMENTS.md)
+and read its shared `DOCUMENT_CONTEXT.md` for the local contract, assembly
+rules, assigned evidence and only relevant inherited defaults. Consult
 [AUDIENCE.md](../../../AUDIENCE.md), [STYLE_GUIDE.md](../../../STYLE_GUIDE.md)
 and the relevant [type profile](../../../DOCUMENTATION_TYPE_PROFILES.md).
 Unresolved placeholders are not confirmed requirements. Ask only for an

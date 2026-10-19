@@ -1,34 +1,33 @@
 # Task Handoff
 
-- Date/status: 2026-10-11; completed IDEA-0005 implementation under Governance
-  TVDR-0057 after maintainer selection.
-- Outcome: review-document provides critical technical document/section feedback
-  on correctness, reasoning, reader success, structure and language. Its body
-  requires named maintainer invocation; agents/openai.yaml sets
-  allow_implicit_invocation: false. No grilling skill invocation.
-- Decisions: one selected-scope pass and material-finding recheck by default;
-  prioritized, precisely located demonstrated problems, plausible concerns and
-  preferences with evidence, reader consequences and concrete improvement.
-  Document-local catalog/type/audience contracts guide the review.
-- Scope: new skill/policy, IDEA-0005 promotion, bilingual README discovery,
-  Unreleased changelog and this handoff. Governance owns the durable source
-  decision; no concrete local record or existing-project adoption.
-- Evidence: the skill passed local Test-CodexSkill.ps1 using the existing pinned
-  tools interpreter via -PythonPath (PyYAML 6.0.3), without installation.
-  Parsed the invocation policy as Boolean false; selected Markdown links passed
-  for 69 local targets in 5 files. Reviewed bilingual rows and source scenarios
-  for section-context limits, unverified technical assertions and reader steps.
-- Limits: source/scenario reasoning only; no live document critique, operational
-  procedure execution, rendering or visual inspection. Content review does not
-  establish rendered quality; visual-inspection remains separately explicit.
-  Annotated external feedback stays with revise-document; revisions are requested
-  separately. Technical truth and publication remain maintainer-owned.
-- Preservation: earlier idea requirements retained and promoted; unrelated work
-  and staged selections preserved. Protected-file escalation covered only the
-  new skill. Implementation inspected no sensitive sources and made no Git writes,
-  version/tag changes or publication; later versioning uses separate authority.
-- Deferred: whitespace, broad bilingual/render/disclosure suites, live model
-  behavior and milestone/release gates not run. Ordinary commit preparation
-  reuses the unchanged targeted evidence recorded above.
-- Continuation: no selected implementation work remains. Actual review requires
-  an explicit maintainer invocation; adoption/versioning use separate authority.
+- Date/status: 2026-10-19; completed the selected question-research source
+  extension under Governance TVDR-0059.
+- Outcome: deliberate named [investigate-question](.agents/skills/investigate-question/SKILL.md)
+  operationalizes one concrete question or a bounded preferably related set,
+  saves a [report](templates/RESEARCH_REPORT.md), individually assesses every
+  used source and optionally retains data with schema/provenance. Question IDs,
+  source IDs, inspected versions, dates, locators and reasons preserve later
+  traceability. New passes reference earlier assessments rather than replacing
+  their evidence baseline. Local ignored materials are the default.
+- Document lifecycle: add-document fills the shared context from confirmed
+  decisions/open questions/next action; start-task reconciles that state with
+  request/handoff; handoff-task refreshes each affected context before replacing
+  TASK_HANDOFF.md and links back to it. Unrelated document state is preserved;
+  task completion need not close document follow-ups. Earlier TVDR-0058 context,
+  folder, catalog and assembly/update work remains intact.
+- Domain boundary: Document contexts own open questions/next steps and survive task checkpoint replacement.
+- Evidence: this repository's Test-CodexSkill.ps1 passed for 4 new/changed
+  skill definitions using the existing PyYAML 6.0.3 environment; no installation.
+  Explicit-only YAML policies parsed, selected local link targets checked and
+  local report storage verified ignored by Git. Bilingual meaning and relevant
+  question/source/update source scenarios reviewed.
+- Limits: source/scenario evidence, not live research, scientific source-quality
+  qualification or a real document update. No runtime, operational, statistical,
+  rendered visual, whitespace or comprehensive family/milestone gates ran in
+  this step. Prior unchanged Docs synthetic HTML evidence remains separate.
+- Preservation: prior changes and staging retained. No existing derived project
+  (including agit-admin-guides), sensitive input, protected content, credentials,
+  Git metadata, version/tag or publication was changed. Cross-repository skill
+  writes used exact hash-checked target plans with narrow platform escalation.
+- Continuation: no selected source implementation work remains. Existing-project
+  adoption and later Git versioning require separate authority and fresh state.

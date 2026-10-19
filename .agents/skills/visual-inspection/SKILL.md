@@ -7,7 +7,8 @@ description: Inspect named current rendered HTML, PDF or DOCX documentation surf
 
 Run only when the maintainer explicitly invokes `$visual-inspection`. Establish
 the named document, exact current render, selected formats and intended routes,
-pages and viewports. Read `DOCUMENTS.md` and only the applicable format,
+pages and viewports. Resolve `DOCUMENTS.md` and its shared document context
+for the local contract, then read only the applicable format,
 screenshot and disclosure guidance. Preserve source, output and Git state.
 
 Refuse missing, stale, ambiguous or unselected output. Do not render a missing

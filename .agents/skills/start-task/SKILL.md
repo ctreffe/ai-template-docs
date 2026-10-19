@@ -24,7 +24,18 @@ domain and access gates still apply.
    criterion from the request. Ask only for missing information that materially
    affects the work; continue independent authorized work while awaiting it.
 4. Read the target and only directly applicable authority, domain, decision and
-   validation material. Prefer matched sections, changed hunks and bounded
+   validation material. For maintained-document work in an initialized
+   project, resolve its ID in `DOCUMENTS.md`
+   and read the linked `DOCUMENT_CONTEXT.md` before drafting or updating.
+   Read its current open questions, dependencies and next action; reconcile
+   them with the relevant task handoff and the current request. Resolve
+   consequential conflicts; do not reopen settled defaults or assume that
+   task completion closed all document follow-ups.
+   Use its assembly/refresh rules and assigned evidence; do not load other
+   documents by default. If context is missing, report the gap and reconstruct
+   only supported facts without silently migrating existing projects. Keep
+   accepted rule/evidence changes current there in the same task.
+   Prefer matched sections, changed hunks and bounded
    output before full files or diffs.
    Before a coordinated or context-sensitive patch, freshly read each exact
    target span. Build small hunks around stable semantic anchors and separate

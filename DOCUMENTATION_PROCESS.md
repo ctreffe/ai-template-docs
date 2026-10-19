@@ -6,8 +6,11 @@ The documentation process is iterative. Each iteration should leave the reposito
 
 Clarify documentation type profile, purpose, audience, language model, Quarto model, source material, sensitivity constraints, visuals, links, output formats, and review expectations.
 
-Project initialization records shared defaults in `PROJECT_CONTEXT.md` and the
-initial document contract in `DOCUMENTS.md`. In an initialized project, invoke
+Project initialization records shared defaults in `PROJECT_CONTEXT.md`, the
+initial index entry in `DOCUMENTS.md` and its document-local contract in
+`docs/<document-slug>/DOCUMENT_CONTEXT.md`, using
+[the context scaffold](templates/DOCUMENT_CONTEXT.md). Linked language versions
+share one context and document ID. In an initialized project, invoke
 `$add-document` explicitly for each additional maintained document or
 language-linked document set. Document-local choices may refine reviewed
 project defaults but must not silently contradict them.
@@ -19,9 +22,10 @@ project defaults and requires confirmation of shared understanding before edits.
 Setup is complete only when repository identity, maintainer-owned purpose,
 scope, audience, initial roadmap, source and versioning rules, publication
 model, QA expectations, decision-record needs and retained template files are
-recorded consistently. The initial document entry must also contain no required
-`TBD` fields. Do not begin large-scale drafting while required setup decisions
-remain `TBD`.
+recorded consistently. The initial index entry and required context fields
+must be complete for the next operation. Mark nonessential choices explicitly
+deferred and record assembly details as they emerge; do not turn the context
+scaffold into an additional setup questionnaire.
 
 ## 2. Structure
 
@@ -29,17 +33,84 @@ Define the documentation structure before large-scale drafting. For tutorials, d
 
 A useful structure should make reader tasks visible, separate current truth from history, and keep reference material easy to find.
 
+Normally place each document and its chapters under `docs/<document-slug>/`.
+The context records its purpose, background, contract and references to reviewed
+project defaults. The catalog owns its lifecycle status. Root entry pages may
+remain project navigation. Do not publish, render, include or link the internal
+context as a website resource, or place authoring instructions in hidden
+comments within the reader document.
+
 ## 3. Sources and links
 
 Collect source material deliberately. Do not import sensitive material into the collaboration context unless the maintainer has approved it.
 
 Use descriptive internal and external links. Keep references stable and check links before milestones.
 
+Assign stable input/material IDs in the document context, with their purpose,
+supported sections, evidence version and refresh conditions. Keep locations,
+provenance and handling state in the existing catalogs. Several contexts may
+reference the same files; do not duplicate shared sources. Unchanged external
+sources remain in `input/`; created reports and researched datasets belong in
+`materials/`, with their derivation recorded. An assignment changes no access,
+Git or publication authority.
+
+### Question-driven research
+
+Explicitly invoke `$investigate-question` for a practical research task. First
+operationalize a broad topic into one concrete question or a bounded set of
+preferably related questions. Record each question's relevant scope, dates or
+versions, expected answer/evidence and exclusions. Reuse supplied constraints;
+clarify ambiguity that materially changes the research before searching.
+Unrelated questions normally warrant separate scopes or reports; do not impose
+a one-question limit on connected investigations.
+
+Save a report using [the research scaffold](templates/RESEARCH_REPORT.md),
+normally `materials/local/research/<report-id>-<slug>.md`, and register its safe
+metadata in `materials/CATALOG.md`. Use approved versioned/external storage
+when already selected; sensitive metadata stays in permitted ignored storage.
+Give each question a report-local ID and an answer or an explicit unresolved
+state. Shared searches and sources are allowed; report support, uncertainty and
+open gaps for each question. Record methods, actual queries, source evaluation,
+limits, counterevidence and stopping reason. Assess sources for authority,
+expertise, currency, transparency, independence/interests and specific
+claim/version fit; do not require scholarly metrics for ordinary documentation.
+
+Optional JSON/CSV or other data materials keep record/field-level provenance,
+schema/units, selection/transformation rules, missing-value handling and refresh
+instructions in the report or a referenced companion. Catalog every retained
+file and reference the relevant report/question IDs from the document context.
+Research assignments do not accept findings into document prose automatically.
+
 ## 4. Drafting
 
 Draft in small increments. Prefer clear, task-oriented sections over long undifferentiated prose.
 
 Use active voice where appropriate. State prerequisites, steps, outcomes, limitations, and verification points explicitly.
+
+As the document is assembled, retain consequential selection/exclusion,
+organization, data processing, evidence hierarchy and editorial rules in its
+context, including reasons and references. Record the sources/versions actually
+used, not just candidate sources, so a later author can reproduce the method.
+
+### Updating an existing document
+
+Read its context before changing sources or prose. Establish the previous
+evidence baseline, refresh trigger, affected questions/sections and required
+checks. Repeat or deliberately revise its assembly rules; compare refreshed
+inputs, propagate accepted findings and synchronize linked languages. Retain
+changed rules, current evidence versions, update steps and actual verification
+limits in the context in the same task. If prior assembly knowledge is missing,
+record the gap and reconstruct only supported facts; clarify consequential
+choices instead of inventing history. Use changelog/Decision Records/Git for
+history and `TASK_HANDOFF.md` for the task checkpoint.
+
+During document addition, populate the context with confirmed setup decisions,
+open questions/dependencies and the next concrete action. At task entry, read
+that current state alongside the relevant handoff. Before replacing a handoff,
+refresh each affected document context, mark resolved/superseded items and
+preserve unrelated document state. The handoff links document IDs/contexts;
+detailed follow-ups stay there. Completing a task does not close every
+remaining question or next step for a document.
 
 ## 5. Screenshots and visuals
 

@@ -25,7 +25,12 @@ Template files describe how a documentation project should be initialized, maint
   documentation collaboration workflows.
 - `TASK_HANDOFF.md`: Compact versioned task checkpoint.
 - `DOCS_SETUP.md`: Documentation-specific setup checklist.
-- `DOCUMENTS.md`: Maintained document catalog and document-local contracts.
+- `DOCUMENTS.md`: Compact maintained-document index and context paths.
+- `docs/<document-slug>/DOCUMENT_CONTEXT.md`: Local document contract, assigned
+  sources and reproducible assembly/update method, shared by linked languages.
+- `templates/`: Document-context and research-report scaffolds.
+- `$investigate-question`: Concrete practical question research with saved,
+  cataloged reports and optional structured data.
 - `PROJECT_CONTEXT.md`: Project memory template.
 - `DOCUMENTATION_PROCESS.md`: Ongoing documentation workflow.
 - `FEEDBACK_WORKFLOW.md`: Direct-source, annotated DOCX and annotated PDF

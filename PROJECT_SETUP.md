@@ -187,7 +187,14 @@ not an instruction to ask every item during the initial maintainer turn.
    - Include one concrete sentence describing what the collaboration model documents for the derived documentation project, such as documentation practices, collaboration workflows, link discipline, visual inspection or repository conventions.
    - Update `PROJECT_CONTEXT.md`.
    - Complete `DOCS_SETUP.md`.
-   - Complete the initial document contract in `DOCUMENTS.md`.
+   - Complete the initial index entry in `DOCUMENTS.md` and create its shared
+     `docs/<document-slug>/DOCUMENT_CONTEXT.md` from
+     `templates/DOCUMENT_CONTEXT.md`. Put the local contract there; link reviewed
+     project defaults rather than duplicating them. Keep linked language
+     versions and chapters together, adapting navigation and relative links.
+     Preserve assembly/update rules and assigned evidence as work proceeds;
+     defer nonessential details rather than expanding the six-question entry.
+     Keep the internal context outside rendered pages and resource bundles.
    - Adapt `FEEDBACK_WORKFLOW.md`, `AUDIENCE.md`, `STYLE_GUIDE.md`,
      `SCREENSHOTS.md` and `LINKS.md`.
    - Keep `PROJECT_SETUP.md` as initialization provenance.

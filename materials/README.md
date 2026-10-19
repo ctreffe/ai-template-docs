@@ -24,9 +24,26 @@ device-specific paths. Never version credentials, private share tokens or
 absolute local paths.
 
 Examples include cropped screenshots, OCR extracts, converted reference
-documents and retained review preparations. Move accepted textual content to
+documents, retained review preparations, research reports and researched
+JSON/CSV data. Research normally uses `materials/local/research/`; approved
+versioned or external storage remains available. Use
+[the report scaffold](../templates/RESEARCH_REPORT.md) to preserve question-level
+findings, provenance and refresh rules. Document contexts assign catalog IDs to
+one or more documents without copying shared files. Retained research remains
+working evidence rather than automatically accepted document text.
+
+Move accepted textual content to
 `docs/`; keep reviewed binary documentation material in `materials/versioned/`
 after Git approval and preserve its provenance. Presentation source belongs in
 `styles/`. Generated review copies and finished publication outputs belong in
 the applicable format directory below `output/`; returned annotated review
 files remain separate under `review/`.
+
+## Question research
+
+Retain question research reports and optional datasets as separately cataloged
+materials, normally under ignored `local/research/`. Use the
+[report scaffold](../templates/RESEARCH_REPORT.md) for concrete questions,
+individual source assessments with evidence/reasons/dates, methods and limits.
+Keep prior report/source references when later assessments change. New data
+retain schema and record/field provenance; publication remains separate.

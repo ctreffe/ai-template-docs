@@ -3,6 +3,9 @@ project:
   output-dir: output/html
   render:
     - docs/**/*.qmd
+    - "!docs/**/DOCUMENT_CONTEXT.md"
+  # Internal contexts and research materials must not be linked/included as
+  # publication resources; render exclusions do not prevent resource copying.
 
 website:
   title: "TBD Documentation"

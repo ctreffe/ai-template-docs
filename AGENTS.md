@@ -46,14 +46,18 @@ Resident contract.
 
 - Bounded work uses `start-task`, `TASK_HANDOFF.md`, targets and checks. Load
   `PROJECT_CONTEXT.md` only for project-wide state or unclear scope.
+- For maintained-document work in an initialized project, resolve `DOCUMENTS.md`
+  and read its `DOCUMENT_CONTEXT.md` for the local contract, assigned evidence
+  and assembly/update rules; keep it current when accepted rules or evidence
+  baselines change.
 - Read `COLLABORATION.md` for initialization, full review, authority conflicts
   or collaboration-model changes. Load setup, documentation-process, audience,
   style, links, screenshots, Quarto and feedback guidance as needed.
 - Task entry, handoff, ordinary commits and Decision Records route
   automatically. Rendering routes only when an artifact is requested or
   supplies necessary evidence. Invoke initialization, document addition,
-  visual inspection, review, sync, consistency, retrospective, revision, local
-  creation and `commit-milestone` explicitly.
+  visual inspection, review, `investigate-question`, sync, consistency,
+  retrospective, revision, local creation and `commit-milestone` explicitly.
 
 ## Validation
 

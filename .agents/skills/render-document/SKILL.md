@@ -6,7 +6,12 @@ description: Render a maintained Quarto document or report through the repositor
 # Render Document
 
 Confirm the authoritative source, requested or required format, Quarto project
-configuration and documented output location. Apply local source-access,
+configuration and documented output location. For a cataloged document,
+resolve its context from `DOCUMENTS.md` for required formats and validation
+rules; navigation-only pages use the project configuration. Keep
+`DOCUMENT_CONTEXT.md`, research reports and data not approved for publication
+out of rendered pages, includes and copied resources; inspect the actual
+output scope when resource/render rules change. Apply local source-access,
 environment and disclosure rules before rendering. Use the existing project
 toolchain and do not install or update dependencies without approval.
 

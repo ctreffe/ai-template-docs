@@ -51,7 +51,13 @@ keep independent actions separate and never request standing authority.
 Use one task for one coherent documentation objective. Load only the relevant
 audience, type, style, link, screenshot, feedback or Quarto guidance. Load
 visual-inspection guidance only after explicit invocation.
-Use `DOCUMENTS.md` for document-local contracts. Invoke `$add-document`
+Use `DOCUMENTS.md` to locate the document's shared `DOCUMENT_CONTEXT.md`, which
+owns its contract, assigned evidence and repeatable assembly/update rules.
+Consult it before document changes and retain accepted changes to those rules
+or evidence baselines there. Linked language versions share one context.
+Invoke `$investigate-question` deliberately by name for bounded practical
+research with a saved report; frame concrete questions before searching.
+Invoke `$add-document`
 explicitly when an initialized project gains a maintained document; it must not
 reopen project initialization or silently replace project-wide decisions.
 For annotated review, invoke `revise-document`; invoke `render-document`

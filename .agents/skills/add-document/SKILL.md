@@ -23,23 +23,38 @@ Git read-only and preserve existing work and staging.
    route selection nor interview answers grant source-access, rendering, Git,
    publication or other action authority. Both routes continue through the
    existing confirmation and collision checks before any edits.
-3. Confirm the maintainer-owned title, stable document ID and source path;
+3. Confirm the maintainer-owned title, stable document ID, document folder,
+   context path and source paths (normally `docs/<document-slug>/` with one
+   `DOCUMENT_CONTEXT.md` shared across chapters and linked language versions);
    purpose, scope and non-goals; dominant type profile; primary audience and
    reader task; language relationship and authoritative language; required and
    permitted output formats; source, access and sensitivity constraints;
    navigation placement; validation and review expectations; initial lifecycle
-   status; and next action. Reuse settled answers and mark an inherited project
+   status; and next action. Capture known assembly/refresh requirements and
+   assigned source/material/report IDs with intended use. Populate the context
+   from these confirmed decisions and carry forward unresolved document
+   questions, dependencies and the concrete next action from this setup.
+   Fill later details
+   as work proceeds; do not invent past methods or add a full questionnaire.
+   Reuse settled answers and mark an inherited project
    default explicitly. Ask only for unresolved document choices. Stop for any
    missing choice that would change the document's meaning or exposure.
-4. Refuse an ID or path collision. Do not overwrite an existing source,
+4. Refuse an ID, folder or context/source-path collision. Do not overwrite an existing source,
    reinitialize the project or silently contradict project-wide authority.
    Resolve conflicts with the maintainer before editing.
-5. After the decisions are confirmed, add one entry to `DOCUMENTS.md`. Create
-   the agreed source skeleton or language-linked source set and update
+5. After the decisions are confirmed, create the shared context from
+   [the scaffold](../../../templates/DOCUMENT_CONTEXT.md) and add its compact
+   index entry to `DOCUMENTS.md`. Keep the detailed contract, next action,
+   source assignments and assembly/update method in the context; the catalog
+   owns lifecycle status. Reference reviewed project defaults. Create the
+   agreed source skeleton or language-linked source set and update
    `_quarto.yml` navigation only when those changes are part of the request.
+   Keep the internal context out of rendered pages, includes and publication
+   resources. Reuse existing catalog IDs without copying shared sources.
    Update `PROJECT_CONTEXT.md` only when its catalog pointer, documentation
    structure or current-work summary would otherwise be stale.
-6. Check catalog completeness, source-path uniqueness, language relationships,
+6. Check index/context agreement, required context completeness for the next
+   operation, ID/path uniqueness, language relationships,
    navigation references, links and YAML syntax in the narrowest useful scope.
    Report required render, review and Decision Record follow-up separately.
 

@@ -10,3 +10,10 @@ files. All listed materials are approved for assistant access.
 Use stable IDs and descriptive filenames; include the material ID in the
 filename when practical. Update the entry when the file, storage state or
 location changes. A catalog entry does not authorize publication.
+
+Catalog saved research reports and every generated data file separately. Use
+`Based on` for known input/material IDs; public web evidence and exact locators
+may be detailed in the report rather than cataloging every search hit. The
+document's `DOCUMENT_CONTEXT.md` owns document-to-source/report assignments;
+catalog notes may link back but are not a second assignment authority. Keep
+sensitive descriptions and mappings in approved ignored storage.
