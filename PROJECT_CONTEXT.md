@@ -9,13 +9,14 @@ This file is a template. In a derived documentation project, replace the placeho
 - Initial template baseline: `<template version and commit hash>`
 - Initialization status: `<not started | in progress | completed>`
 - Initialization date: `<YYYY-MM-DD | not yet completed>`
-- Last template harmonization: `<not yet performed | template version, commit hash and date>`
+- Last template harmonization: `<not yet performed | date and TEMPLATE_SYNC.md record>`
 - Last collaboration retrospective: `<not yet performed | reviewed period or milestone, date and relevant record>`
 - Intentional template deviations and relevant Decision Records: `<none | concise list>`
 
 Keep `PROJECT_SETUP.md` as initialization provenance. It describes the
 project's methodological roots; this section records its
-lifecycle status and the baselines used over time.
+initial lineage and lifecycle status. Later selective adoption belongs in
+TEMPLATE_SYNC.md, not a second baseline history here.
 
 During initialization, fill only the fields needed for the six fundamental
 answers, the first useful document outcome and its current source boundary.
@@ -245,10 +246,27 @@ Link check expectations:
   require a specific instruction containing `explicit`, `explicitly` or the
   German word family `explizit`.
 
-## Next session
+## Task continuation
 
-- Recommended next step: TBD
-- Source files to continue from: TBD
-- Validation or review to perform next: TBD
-- Materials not approved for assistant inspection: TBD
-- Blocking maintainer decisions: TBD
+Use [TASK_HANDOFF.md](TASK_HANDOFF.md) for the bounded task objective, exact
+artifacts, pending checks, scope limits and next action. Update project context
+only when intent, durable constraints or the current roadmap changes. Retain
+domain-specific evidence/access limits in their authoritative sections above.
+Protected Git actions and publication retain separate authorization.
+
+## State ownership and template synchronization
+
+| State | Authoritative owner |
+| --- | --- |
+| Project intent, constraints and current roadmap | PROJECT_CONTEXT.md |
+| Current bounded task checkpoint and next task action | TASK_HANDOFF.md |
+| Selected upstream comparison, adoption and deferred changes | [TEMPLATE_SYNC.md](TEMPLATE_SYNC.md), only when sync is selected |
+| Durable rationale and completed history | Decision Records and CHANGELOG.md |
+
+Keep the last-harmonization field above as a date/summary pointer to the sync
+record, not a second adoption ledger. Task completion does not close unrelated
+project or document work. Preserve context owned by another active objective.
+
+DOCUMENTS.md owns document lifecycle; each shared DOCUMENT_CONTEXT.md owns its
+assembly/update rules, assigned evidence and document-specific follow-ups.
+TASK_HANDOFF.md links affected contexts without copying their backlogs.

@@ -164,7 +164,8 @@ Rufe `$investigate-question` für praxisbezogene Recherche gezielt beim Namen
 auf. Operationalisiere ein Thema vor der Suche zu einer konkreten Frage oder
 einem abgegrenzten Satz vorzugsweise zusammenhängender Fragen. Der Skill
 speichert einen [strukturierten Bericht](templates/RESEARCH_REPORT.md),
-normalerweise unter ignoriertem `materials/local/research/`, mit Antwort und
+außerhalb von Git, bevorzugt im bereits freigegebenen, verfügbaren externen
+Rechercheordner; ersatzweise im ignorierten `materials/local/research/`. Er enthält Antwort und
 Belegen/Unsicherheiten je Frage, Quellenbewertung, Methode, Lücken und
 Aktualisierungsbedingungen. Optionale Datendateien behalten Schema und
 Provenienz. Berichte/Daten sind katalogisierte Materialien, die über die

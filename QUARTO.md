@@ -72,11 +72,16 @@ The default render scope is limited to Quarto source files in `docs/`:
 ```yaml
 project:
   render:
-    - docs/**/*.qmd
-    - "!docs/**/DOCUMENT_CONTEXT.md"
+    - /docs/**/*.qmd
+    - "!/docs/**/DOCUMENT_CONTEXT.md"
 ```
 
 This prevents repository governance files such as `README.md`, `COLLABORATION.md`, or `PROJECT_CONTEXT.md` from being rendered as website pages by default.
+
+The leading slash anchors Quarto's pattern to the project root. Without it,
+smart glob expansion can also select nested copies such as `temp/example/docs/`.
+Retain this anchor when adding document subdirectories; verify the actual render
+input list after changing project scope.
 
 Do not add internal contexts, report scaffolds, saved research reports or
 unapproved data to navigation, includes, listings or resource bundles. A render

@@ -155,8 +155,9 @@ Document follow-ups can remain open after a task is completed.
 Invoke `$investigate-question` by name for practical research. Operationalize a
 topic into one concrete question or a bounded set of preferably related
 questions before searching. The skill saves a
-[structured report](templates/RESEARCH_REPORT.md), normally under ignored
-`materials/local/research/`, with an answer and support/uncertainty for each
+[structured report](templates/RESEARCH_REPORT.md) outside Git, preferring an
+already approved, available external research root, with ignored
+`materials/local/research/` as fallback. It records an answer and support/uncertainty for each
 question, source credibility, methods, gaps and refresh conditions. Optional
 data files retain schema and provenance. Reports/data are cataloged materials
 assigned through document contexts; their findings are not automatically

@@ -4,6 +4,22 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+No unreleased changes.
+
+## [0.8.0] - 2026-10-19
+
+- Anchor Quarto render inputs to the project root so nested working copies do
+  not enter the publication build; verify the default template output.
+
+- Distinguish upstream comparison, selected adoption and deferred changes in
+  TEMPLATE_SYNC.md; clarify project/task/document state ownership and reuse
+  supplied initialization choices. Simplify new approved external storage
+  to input/materials/optional output; retain legacy mappings. Keep research
+  unversioned, preferring an approved available cloud root with local fallback.
+
+- Remove the retired Guarded control-plane exception from decision routing
+  and initialization guidance; source-template decisions use Governance.
+
 - Populate open questions and next actions through add-document; reconcile them
   at start-task and refresh affected document contexts before handoff-task
   replaces the task checkpoint, preserving unrelated document state.
