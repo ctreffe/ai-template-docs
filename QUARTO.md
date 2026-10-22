@@ -105,6 +105,31 @@ fragment a short coherent operation into trivial pieces.
 
 HTML is the default practical output for most technical documentation projects and is the default format in this template.
 
+The HTML format uses `embed-resources: true` by default:
+
+```yaml
+format:
+  html:
+    embed-resources: true
+```
+
+This embeds images, styles and scripts for static page delivery. It does not
+combine a website's pages, search index, downloads or ordinary links into one
+file. Deliver the selected page alone only when those site functions are not
+required; deliver the complete site when they are. Keep existing output paths.
+Larger HTML files and dynamic services or runtime requirements may justify a
+deliberate override. Record its reason, required companion files/services and
+checks in the document context or project guidance. Embedding grants no new
+source access, remote fetching or publication authority.
+
+After changing HTML resource settings, inspect the selected output's image,
+script, stylesheet and CSS loading references, including remaining local and
+remote dependencies. Check a copy of the HTML away from adjacent asset folders
+before describing static delivery as self-contained. For offline claims,
+also verify without network access and document any site/runtime exceptions.
+Unused generated asset folders alone do not prove a dependency; do not delete
+unrelated output. See [Quarto's embedding guidance](https://quarto.org/docs/output-formats/html-basics.html#self-contained).
+
 PDF is supported when a printable or archival output is needed, but it requires a local TeX toolchain such as TinyTeX. Derived projects should enable PDF output in `_quarto.yml` only when PDF rendering is required and the toolchain is available. If PDF is part of milestone QA, verify TinyTeX or another TeX distribution during project setup.
 
 Other Quarto outputs may be used if the project requires them, but they should be documented in `DOCS_SETUP.md` and tested before milestone closure.

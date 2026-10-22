@@ -18,6 +18,7 @@ website:
 
 format:
   html:
+    embed-resources: true
     toc: true
     number-sections: true
     theme: cosmo
@@ -25,6 +26,7 @@ format:
 # Enable PDF output in derived projects when a TeX toolchain is available.
 # format:
 #   html:
+#     embed-resources: true
 #     toc: true
 #     number-sections: true
 #     theme: cosmo

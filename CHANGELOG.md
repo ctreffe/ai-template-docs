@@ -4,7 +4,8 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
-No unreleased changes.
+- Embed Quarto HTML resources by default and document static page portability,
+  website dependencies and deliberate exceptions.
 
 ## [0.8.0] - 2026-10-19
 

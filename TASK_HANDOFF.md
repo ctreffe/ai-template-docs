@@ -1,32 +1,30 @@
 # Task handoff
 
 Status: completed
-Date: 2026-10-19
+Date: 2026-10-22
 
 ## Outcome
 
-Source milestone v0.8.0 incorporates the accepted workflow optimization,
-selective adoption ledger, simpler external storage and unversioned research
-defaults. Research skills require explicit invocation. Existing harmonization
-and domain-specific boundaries are preserved.
+Quarto HTML now embeds resources by default, including the commented
+multi-format example. QUARTO.md documents per-page delivery, remaining website
+search/navigation/download dependencies, deliberate overrides and checks.
 
 ## Evidence and limits
 
-The Governance-owned complete family gate passed, including source links,
-README topology, common skill contracts, file policies and version metadata.
-Changed skills passed their owning validator; the storage helper passed 28
-synthetic assertions. Detailed coordinated evidence is retained by Governance
-in MILESTONE_2026-10-19.md and OPTIMIZATION_IMPLEMENTATION.md.
+Effective Quarto inspection confirmed HTML embedding. An isolated invented
+local SVG/CSS/JavaScript fixture rendered successfully with the actual project
+configuration and no resource-setting override; detached HTML loading-reference
+and CSS-URL checks passed without warnings.
 
-Both language pages rendered to HTML. Root-anchored selection excludes nested test documents; local output links and resource containment passed. Shared document contexts retain assembly/update rules. No explicit visual-inspection task was selected.
-
-Real cloud convergence and independent agent trials were not performed.
-Derived projects and existing cloud files were neither inspected nor migrated.
-Generated artifacts, dependency libraries and local mappings stay unversioned.
+Governance QUARTO_HTML_DEFAULTS.md owns the coordinated evidence and limits.
+No browser/offline or visual inspection, real-data processing, DOCX/PDF render
+or full milestone/family gate ran. No skills changed; skill validation is not
+applicable. Static checks do not establish runtime behavior or disclosure
+clearance. No existing derived project was accessed or synchronized.
 
 ## Continuation
 
-No source implementation remains for this milestone. Future project adoption
-uses TEMPLATE_SYNC.md and its own scope. Verify live Git state and the annotated
-version tag before relying on release status; this handoff describes source
-acceptance and does not substitute for remote verification.
+No implementation remains for this selected source change. Project adoption
+uses its selected template-sync scope and local delivery/runtime checks.
+Releases, version changes, tags and publication remain separately controlled.
+Versioning decisions use live Git state.
