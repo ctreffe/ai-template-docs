@@ -104,12 +104,11 @@ Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
 ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
 erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft anschließend
 `$start-project` auf.
-Nach erfolgreicher Initialisierung wird die geerbte Template-Historie in
+Nach erfolgreicher Initialisierung werden geerbte Template-Historien in
 `CHANGELOG.md` und `TASK_HANDOFF.md` durch projektspezifischen Zustand ersetzt.
-Das reine Template-`IDEAS.md`, die Projektkopie von `$create-local-project` und
-ihre Verweise werden entfernt, sofern nicht bewusst ein projekteigener
-Ideenbestand eingerichtet wird. Die Initialisierungsdateien bleiben als
-Provenienz erhalten.
+`IDEAS.md` wird ein leeres projekteigenes Backlog; bereits verfasste Projektideen
+bleiben erhalten. Die Projektkopie von `$create-local-project` und ihre reinen
+Template-Verweise werden entfernt. Setup-Dateien bleiben als Provenienz erhalten.
 
 Bei der Initialisierung werden die geerbten `README.md` und `README.de.md`
 zu `TEMPLATE_README.md` und `TEMPLATE_README.de.md`. Sie bleiben als angepasste
@@ -214,13 +213,14 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`handoff-task`](.agents/skills/handoff-task/SKILL.md) | Agent oder explizit | Sichert Ergebnis, Evidenz und nächsten Schritt kompakt in `TASK_HANDOFF.md`. |
 | [`commit-changes`](.agents/skills/commit-changes/SKILL.md) | Agent oder explizit | Erstellt einen regulären abgegrenzten Commit und führt den normalen Upstream-Push mit expliziter Commit-Freigabe aus, sofern der Push nicht ausgeschlossen wurde. |
 | [`record-decision`](.agents/skills/record-decision/SKILL.md) | Agent oder explizit | Dokumentiert eine dauerhafte Entscheidung im passenden Record-Typ; Entscheidungen des Quelltemplates werden an Governance geroutet. |
+| [`record-idea`](.agents/skills/record-idea/SKILL.md) | Agent oder explizit | Hält auf klaren Erfassungswunsch vorhandene Ideen im zuständigen Backlog fest; Transferrechte bleiben separat. |
 | [`reuse-fixes`](.agents/skills/reuse-fixes/SKILL.md) | Agent oder explizit | Verwendet bestätigte Lösungen dieses Repositorys wieder, hält knappe Vorbeugung fest und fragt nur bei fehlender Freigabe oder blockierenden Entscheidungen nach. |
 | [`start-project`](.agents/skills/start-project/SKILL.md) | Explizit | Initialisiert ein neues, noch nicht eingerichtetes abgeleitetes Projekt anhand der erhaltenen Setup-Leitlinien. |
 | [`review-project`](.agents/skills/review-project/SKILL.md) | Explizit | Erstellt eine umfassende neutrale Bestandsaufnahme des Projektzustands und der Evidenzlücken. |
 | [`manage-external-storage`](.agents/skills/manage-external-storage/SKILL.md) | Explizit | Richtet optionalen externen Speicher ein, bindet einen Host an oder prüft ausgewählte lokale Dateien. |
 | [`sync-template`](.agents/skills/sync-template/SKILL.md) | Explizit | Vergleicht ein abgeleitetes Projekt mit seinem verifizierten Quelltemplate und übernimmt ausgewählte Änderungen unter Erhalt der Projektanpassungen. |
 | [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explizit | Diagnostiziert interne Widersprüche zwischen Intention, Roadmap, Entscheidungen, Inhalten und Dokumentation und entwickelt abgegrenzte Optionen. |
-| [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explizit | Wertet Zusammenarbeitsevidenz aus und trennt Projektbefunde von wiederverwendbaren Template- oder Familienkandidaten. |
+| [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explizit | Entwickelt gemeinsam aus einem vereinbarten Projektverlauf Verbesserungsideen; record-idea übernimmt die ausgewählte Erfassung. |
 | [`create-local-project`](.agents/skills/create-local-project/SKILL.md) | Explizit | Erzeugt ein lokales abgeleitetes Repository aus diesem Quelltemplate und übergibt es an die Initialisierung; wird nach erfolgreichem Projektsetup entfernt. |
 | [`add-document`](.agents/skills/add-document/SKILL.md) | Explizit | Ergänzt ein gepflegtes Dokument oder verknüpfte Sprachfassungen einschließlich Katalogmetadaten und Navigation. |
 | [`render-document`](.agents/skills/render-document/SKILL.md) | Aufgabenabhängig oder explizit | Rendert gepflegte Quarto-Quellen in den benötigten Formaten und prüft technische Ergebnisse und Ablage. |
@@ -403,9 +403,10 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
   `TROUBLESHOOTING.local.md`. Andere Repositories werden nicht einbezogen.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg.
-- **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare
-  Dokumentationskandidaten und wird bei normaler Projektinitialisierung
-  entfernt, sofern nicht bewusst ein projekteigener Ideenbestand erhalten bleibt.
+- **`IDEAS.md`** sammelt Ideen getrennt von Roadmap und Entscheidungen.
+  Neue Projekte beginnen ohne geerbte Template-Ideen mit einem eigenen Backlog;
+  bestehende Projektideen bleiben erhalten. `record-idea` erfasst vorhandene
+  Ideen, `perform-retrospective` entwickelt sie gemeinsam aus dem Projektverlauf.
 
 ### Dokumentationsregeln und Entscheidungen
 

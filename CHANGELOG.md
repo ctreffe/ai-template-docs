@@ -4,6 +4,12 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Adopt TVDR-0070: add implicit-capable record-idea, separate idea capture from
+  collaborative retrospective discovery, and provide empty project-owned idea
+  backlogs at successful initialization. Preserve existing ideas, local domain
+  boundaries and exact cross-repository transfer authority; existing projects
+  require selected adoption.
+
 - Embed Quarto HTML resources by default and document static page portability,
   website dependencies and deliberate exceptions.
 
