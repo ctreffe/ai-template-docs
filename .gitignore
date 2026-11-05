@@ -29,6 +29,11 @@ tmp/
 /review/*
 !/review/README.md
 
+# Local Codex profile and recovery state
+/.codex/config.toml
+/.codex/restricted-storage.original.toml
+/RESTRICTED_STORAGE.local.md
+
 # External files and sources
 /input/intake/**
 !/input/intake/README.md

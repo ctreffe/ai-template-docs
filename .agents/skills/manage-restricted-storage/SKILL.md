@@ -1,0 +1,42 @@
+---
+name: manage-restricted-storage
+description: Configure, confirm or roll back a project-local Codex profile for closed storage. Use on deliberate invocation or from start-project's final profile step.
+---
+
+# Manage Restricted Storage
+
+Apply AGENTS.md and the [input rules](../../../input/README.md). Use the
+[profile procedure](references/codex-permissions.md) for an approved setup,
+activation check or rollback. Confirm the exact project, scope and missing
+action authority before a configuration change.
+
+Resolve the standard denies from the known project root. Keep
+`input/intake/`, `input/restricted/` and `temp/restricted/` closed to listing,
+reading, processing and writing by Codex. Never inspect them to establish
+coverage. Add external denies only for exact paths supplied and approved by
+the maintainer. Keep the project’s readable working paths available.
+
+Use the [existing input catalog](../../../input/CATALOG.md) for approved
+source metadata and ignored `input/CATALOG.local.md` for approved sensitive
+details. Update metadata only from maintainer reports. A catalog entry grants
+no source access. Keep temporary files outside the catalog.
+
+Keep maintained documentation and its document context authoritative.
+A profile change grants no approval to render, include or publish screenshots,
+logs or source excerpts.
+
+Report saved configuration, post-restart active scope and rollback separately.
+The short check confirms declared settings for ordinary local commands.
+Refer concrete doubts about actual behavior to Governance.
+
+## Standard profile during initialization
+
+When explicitly invoked `start-project` routes here, use the
+[profile procedure](references/codex-permissions.md) for the documented
+closed folders only. Reuse setup choices and skip optional area setup, new
+catalogs and behavior probes. Verify that local config and recovery files
+are ignored and untracked. An exact original config copy can use
+`.codex/restricted-storage.original.toml`. Record the pending restart and
+intended profile with the recoverable original state. If already prepared, continue from that
+state without rewriting the profile or its original backup. Return the
+post-restart active-scope result to `start-project`.

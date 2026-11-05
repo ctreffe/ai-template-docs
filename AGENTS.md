@@ -59,6 +59,10 @@ Resident contract.
   visual inspection, review, `investigate-question`, sync, consistency,
   retrospective, revision, local creation and `commit-milestone` explicitly.
 
+- Invoke `manage-restricted-storage` deliberately for approved project profile
+  setup, activation checks or rollback. The existing catalog grants no
+  access to closed zones.
+
 - Use `record-idea` for a clear request to retain or update an idea; discussion
   alone does not trigger capture. Retrospective discovery remains explicit.
 

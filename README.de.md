@@ -218,6 +218,7 @@ lies bei Bedarf nur den passenden Detailabschnitt.
 | [`start-project`](.agents/skills/start-project/SKILL.md) | Explizit | Initialisiert ein neues, noch nicht eingerichtetes abgeleitetes Projekt anhand der erhaltenen Setup-Leitlinien. |
 | [`review-project`](.agents/skills/review-project/SKILL.md) | Explizit | Erstellt eine umfassende neutrale Bestandsaufnahme des Projektzustands und der Evidenzlücken. |
 | [`manage-external-storage`](.agents/skills/manage-external-storage/SKILL.md) | Explizit | Richtet optionalen externen Speicher ein, bindet einen Host an oder prüft ausgewählte lokale Dateien. |
+| [`manage-restricted-storage`](.agents/skills/manage-restricted-storage/SKILL.md) | Explizit | Richtet das Profil für gesperrte Projektordner ein oder nimmt es zurück und prüft den Geltungsbereich nach einem Desktop-Neustart. |
 | [`sync-template`](.agents/skills/sync-template/SKILL.md) | Explizit | Vergleicht ein abgeleitetes Projekt mit seinem verifizierten Quelltemplate und übernimmt ausgewählte Änderungen unter Erhalt der Projektanpassungen. |
 | [`check-consistency`](.agents/skills/check-consistency/SKILL.md) | Explizit | Diagnostiziert interne Widersprüche zwischen Intention, Roadmap, Entscheidungen, Inhalten und Dokumentation und entwickelt abgegrenzte Optionen. |
 | [`perform-retrospective`](.agents/skills/perform-retrospective/SKILL.md) | Explizit | Entwickelt gemeinsam aus einem vereinbarten Projektverlauf Verbesserungsideen; record-idea übernimmt die ausgewählte Erfassung. |

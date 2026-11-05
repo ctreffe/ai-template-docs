@@ -18,6 +18,10 @@ other content change creates a new file governed through `materials/`.
   documented task;
 - `versioned/` contains reviewed files approved for Git and assistant access.
 
+For a project-local Codex profile that enforces the closed zones, invoke
+[manage-restricted-storage](../.agents/skills/manage-restricted-storage/SKILL.md)
+deliberately. It covers `intake/`, `restricted/` and `temp/restricted/`.
+
 Use `CATALOG.md` for safe metadata about files and unchanged external services,
 datasets or URLs, and ignored `CATALOG.local.md` for sensitive local details.
 Resolve logical external locations through ignored `PATHS.local.md`. Assistant access, Git

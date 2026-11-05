@@ -4,6 +4,15 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Add the standard closed-folder profile to the end of project initialization
+  under TVDR-0076. Resume after the Desktop restart and confirm the active
+  scope before initialization cleanup.
+
+- Add explicit-only manage-restricted-storage under TVDR-0075. Reuse the
+  existing catalog and enforce the three closed zones with a selected
+  project-local profile. Check activation and recovery after a full
+  Desktop restart.
+
 - Adopt TVDR-0070: add implicit-capable record-idea, separate idea capture from
   collaborative retrospective discovery, and provide empty project-owned idea
   backlogs at successful initialization. Preserve existing ideas, local domain
