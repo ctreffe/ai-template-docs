@@ -22,6 +22,7 @@ refer to ignored catalog/mapping files for sensitive details.
 - Primary audience, reader task and assumed prior knowledge: TBD
 - Language relationship, authoritative language and translation checks: TBD
 - Required / permitted output formats and navigation placement: TBD
+- Document/site output destination, collision handling and preservation of companion formats: TBD
 - Source, assistant-access, sensitivity and publication constraints: TBD
 - Validation and review expectations: TBD
 - Relevant Decision Records: none or TBD

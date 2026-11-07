@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: output/html
+  output-dir: output/website
   render:
     - /docs/**/*.qmd
     - "!/docs/**/DOCUMENT_CONTEXT.md"

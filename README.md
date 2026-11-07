@@ -287,8 +287,9 @@ outputs below `output/`.
 
 Generation method does not determine location. Keep a generated file in
 `materials/` when it is a durable working or source file consumed by later
-documentation steps. Place it in `output/<format>/` when it is a generated
-project result intended for use, review, handoff, publication or delivery.
+documentation steps. Place it in the document's folder below `output/` when it
+is a generated project result intended for use, review, handoff, publication or
+delivery.
 Disposable generation intermediates remain in `temp/`; maintained `docs/`,
 `materials/versioned/` and `styles/` sources keep their authoritative
 locations.
@@ -411,10 +412,19 @@ Templates live in [decisions/](decisions/). Create a record only when the ration
   approved for Git. Every file needs a clear purpose, provenance and
   sensitivity status; publication remains separate.
 - **`styles/`** contains maintained presentation source when needed.
-- **`output/`** contains ignored generated results separated by format, such as
-  `output/html/`, `output/pdf/` or `output/docx/`.
+- **`output/`** contains ignored generated results in shallow document or
+  subproject folders, with companion formats together, for example
+  `output/handbook/handbook.pdf` and `output/handbook/handbook.docx`.
+  The template's coherent website tree uses `output/website/`.
 - **`review/`** contains ignored returned annotated review files directly;
-  generated review outputs remain under `output/<format>/`.
+  generated review outputs remain in the document's folder below `output/`.
+
+Within each role and access boundary, prefer descriptive document or subject
+folders for input, materials and output. Work-item IDs remain metadata; add
+depth only for a practical need. Keep technical dependency trees intact and
+preserve companion formats when rendering. Existing files are not automatically
+migrated. See [repository layout](REPOSITORY.md#document-and-subproject-folders)
+and [render preservation](QUARTO.md#default-outputs).
 
 ## Template and Derived Project Files
 

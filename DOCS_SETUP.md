@@ -94,8 +94,10 @@ Define:
 - Whether Quarto is used as the internal source format.
 - Whether the project is a website, single document, book, or mixed Quarto project.
 - Required output formats, usually HTML and/or PDF.
-- Format-specific generated-output directories below ignored `output/`, such
-  as `output/html/`, `output/pdf/` or `output/docx/`.
+- Shallow document/subproject folders below ignored `output/`, keeping companion
+  formats together; `output/website/` holds the template's coherent site tree.
+- Render destinations, collision handling and preservation of other formats;
+  use `--no-clean` for shared Quarto output or isolated staging where needed.
 - Whether `docs/index.qmd` and `docs/index.de.qmd` remain parallel entry points. This is the default bilingual structure.
 - Required Quarto CLI installation and PATH status.
 - Required R, Python, LaTeX, TinyTeX, or Quarto extensions. If PDF output is required, confirm TeX/TinyTeX during setup.
@@ -113,8 +115,8 @@ Define the review model according to `FEEDBACK_WORKFLOW.md`:
 - Whether annotated PDFs are expected for layout, table, figure or print QA.
 - How external feedback will be curated by the maintainer, including whether
   `Maintainer:` comments will be used.
-- Which generated review outputs belong below `output/<format>/` and which
-  returned annotated files belong directly below `review/`.
+- Which generated review outputs belong in each document's `output/` folder
+  and which returned annotated files belong directly below `review/`.
 - Which review files the assistant may inspect, which may be versioned and
   which may be published or shared.
 - How review decisions and closed feedback will be traced.

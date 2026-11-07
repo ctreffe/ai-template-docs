@@ -192,8 +192,8 @@ not an instruction to ask every item during the initial maintainer turn.
      comments.
    - Local storage, assistant access, Git versioning and publication rules for
      review files.
-   - Generated review outputs below `output/<format>/` and returned annotated
-     files directly below ignored `review/`.
+   - Generated review outputs grouped by document below `output/`, with companion
+     formats together, and returned annotated files directly below ignored `review/`.
    - Transfer of accepted feedback back to authoritative source files.
 
 10. Adapt template files.

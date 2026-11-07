@@ -305,8 +305,9 @@ Review-Dateien in `review/` und erzeugte Outputs unter `output/`.
 Nicht die Erzeugungsweise, sondern die aktuelle Projektrolle bestimmt den
 Ablageort. Bewahre eine erzeugte Datei in `materials/` auf, wenn sie als
 dauerhafte Arbeits- oder Quelldatei in weitere Dokumentationsschritte eingeht.
-Lege sie in `output/<format>/` ab, wenn sie als erzeugtes Projektergebnis zur
-Nutzung, Prüfung, Übergabe, Veröffentlichung oder Auslieferung bestimmt ist.
+Lege sie im Dokumentordner unter `output/` ab, wenn sie als erzeugtes
+Projektergebnis zur Nutzung, Prüfung, Übergabe, Veröffentlichung oder
+Auslieferung bestimmt ist.
 Wegwerfbare Erzeugungszwischenstände bleiben in `temp/`; gepflegte Quellen in
 `docs/`, `materials/versioned/` und `styles/` behalten ihre maßgeblichen Orte.
 
@@ -434,10 +435,20 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record nur, w
   mit Git-Freigabe. Jede Datei benötigt Zweck, Provenienz und
   Sensitivitätsstatus; die Veröffentlichung bleibt getrennt.
 - **`styles/`** enthält bei Bedarf gepflegte Darstellungsquellen.
-- **`output/`** enthält ignorierte, nach Format getrennte erzeugte Ergebnisse,
-  etwa `output/html/`, `output/pdf/` oder `output/docx/`.
+- **`output/`** enthält ignorierte erzeugte Ergebnisse in flachen Dokument- oder
+  Teilprojektordnern; zusammengehörige Formate bleiben beieinander, etwa
+  `output/handbook/handbook.pdf` und `output/handbook/handbook.docx`.
+  Der zusammengehörige Website-Baum des Templates liegt in `output/website/`.
 - **`review/`** enthält direkt die ignorierten zurückgegebenen annotierten
-  Review-Dateien; erzeugte Review-Outputs bleiben unter `output/<format>/`.
+  Review-Dateien; erzeugte Review-Outputs bleiben im Dokumentordner unter `output/`.
+
+Bevorzuge innerhalb jeder Rollen- und Zugriffsgrenze aussagekräftige Dokument-
+oder Themenordner für Input, Materialien und Output. Arbeitskennungen bleiben
+Metadaten; zusätzliche Ebenen brauchen einen praktischen Grund. Technische
+Abhängigkeitsstrukturen bleiben erhalten, ebenso andere Formate beim Rendern.
+Vorhandene Dateien werden nicht automatisch migriert. Siehe
+[Ablagestruktur](REPOSITORY.md#document-and-subproject-folders) und
+[Erhalt anderer Ausgaben](QUARTO.md#default-outputs).
 
 ## Template- und abgeleitete Projektdateien
 

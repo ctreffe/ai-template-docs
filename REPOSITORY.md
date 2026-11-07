@@ -6,6 +6,26 @@ Use `start-task` for lean bounded entry and `TASK_HANDOFF.md` for current task
 state. Invoke `$review-project` explicitly to reconcile comprehensive project,
 documentation and read-only Git evidence.
 
+## Document and subproject folders
+
+Within each applicable role and access root, prefer shallow folders named for
+the document, subject or subproject. Keep companion formats together, for
+example output/handbook/handbook.pdf and output/handbook/handbook.docx.
+A single deliverable may live directly in output/. Add subfolders only for
+meaningful source roles, access boundaries, workflow, volume or tool requirements.
+Work-item and catalog IDs remain metadata, not mandatory directory names.
+Use descriptive filenames and language or revision suffixes when needed to
+avoid collisions; do not add version-folder chains by default.
+
+Apply this within input/ classifications, materials/ storage states and approved
+output locations; never merge access zones or alter original input content.
+Keep catalog IDs, provenance and relative references stable. Technical build,
+website and dependency trees may need their own structure. Rendering must
+preserve companion formats and unrelated files; cleanup needs its own authority.
+Existing projects and files are not moved or reorganized automatically.
+
+Keep maintained docs/ and styles/, ignored output/ and returned review/ roles distinct.
+
 ## Expected structure
 
 - `README.md`: Repository overview.
@@ -33,7 +53,7 @@ documentation and read-only Git evidence.
 - `materials/versioned/`: Maintained binary documentation material approved
   for Git, including reviewed screenshots and figures.
 - `styles/`: Maintained presentation source when needed.
-- `output/`: Ignored generated outputs separated by format.
+- `output/`: Ignored generated outputs grouped by document or subproject.
 - `review/`: Ignored returned annotated review files.
 
 ## Project introductions and inherited workflow guides
@@ -77,9 +97,11 @@ sensitive names, paths or details.
 Maintained Quarto and Markdown sources belong in `docs/`, approved versioned
 binary documentation material in `materials/versioned/`, presentation source
 in `styles/`, and returned annotated review files in `review/`. Generated HTML,
-PDF, DOCX and other results belong below ignored `output/` in a directory named
-for their format. Moving an approved file into a maintained location records
-its Git and project role but does not grant publication rights.
+PDF, DOCX and other results belong below ignored `output/`, normally grouped
+by document with companion formats together. The template website uses
+`output/website/` as a coherent site tree. Moving an approved file into a
+maintained location records its Git and project role but does not grant
+publication rights.
 
 Normally group each maintained document and its language versions/chapters in
 `docs/<document-slug>/`, with a shared internal `DOCUMENT_CONTEXT.md`. The

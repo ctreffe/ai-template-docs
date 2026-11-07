@@ -154,8 +154,8 @@ Relevant never-versioned temporary work outside `temp/restricted/`:
 - DOCX review scope and render method: TBD
 - PDF review purpose and render method: TBD
 - External-feedback curation convention: TBD
-- Local generated review outputs: the applicable format directory below
-  `output/`
+- Local generated review outputs: the document's folder below `output/`, with
+  companion formats together; template website: `output/website/`
 - Local returned review files: directly below `review/`
 - Assistant access, Git versioning and publication rules for review files:
   TBD
@@ -232,7 +232,7 @@ Link check expectations:
 - `temp/` - never-versioned intermediate files
 - `materials/` - retained assistant-readable documentation files and catalog
 - `styles/` - maintained presentation source when needed
-- `output/` - ignored rendered or packaged outputs separated by format
+- `output/` - ignored rendered or packaged outputs grouped by document or subproject
 - `review/` - ignored returned annotated review files
 
 ## Collaboration notes

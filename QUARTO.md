@@ -134,10 +134,20 @@ PDF is supported when a printable or archival output is needed, but it requires 
 
 Other Quarto outputs may be used if the project requires them, but they should be documented in `DOCS_SETUP.md` and tested before milestone closure.
 
-Every generated format should use its own ignored directory below `output/`,
-for example `output/html/`, `output/pdf/` or `output/docx/`. A format directory
-must contain only that output family and may be cleaned independently before a
-new render. The template website baseline writes HTML to `output/html/`.
+Group generated companion formats by document or subproject below ignored
+`output/`, for example `output/handbook/handbook.pdf` and
+`output/handbook/handbook.docx`. A single deliverable may live directly in
+`output/`. The template website writes its coherent page/resource tree to
+`output/website/`; necessary site structure is a technical exception to shallow
+delivery folders. Record each selected destination in the document context.
+
+Quarto can clean its project output directory before rendering. Use
+`--no-clean` whenever a destination contains companion formats or other files
+that must survive. If a renderer cannot safely share a destination, render in
+isolated `temp/` staging and transfer only the selected outputs with their
+required companions. Check filename collisions before replacement. Never clean
+a whole document folder merely to update one format; cleanup remains separately
+authorized. See the [Quarto render options](https://quarto.org/docs/cli/render.html).
 
 ## DOCX and PDF review outputs
 
@@ -155,7 +165,7 @@ mapping and maintainer confirmation.
 In both cases, Quarto files and other maintained repository sources remain
 authoritative. Follow `FEEDBACK_WORKFLOW.md` when rendering, receiving,
 interpreting and closing feedback files. Store newly generated review outputs
-under `output/<format>/`; store returned annotated copies directly under
+in the document's `output/` folder; store returned annotated copies directly under
 ignored `review/`.
 
 ## Bilingual documentation
@@ -185,18 +195,18 @@ external or versioned storage according to their approved state.
 Before a documentation milestone, run Quarto rendering when the toolchain is available:
 
 ```powershell
-quarto render
+quarto render --no-clean
 ```
 
-Verify that each generated format is written below its documented
-`output/<format>/` directory and that no files from another output family are
-mixed into it.
+Verify that generated files reach the documented document/site destination,
+required companions remain available and other formats or unrelated files
+survive unchanged. A successful render alone does not verify preservation.
 
 To render a specific format:
 
 ```powershell
-quarto render --to html
-quarto render --to pdf
+quarto render --to html --no-clean
+quarto render --to pdf --no-clean
 ```
 
 If PDF output is required, confirm that the local PDF toolchain is available. If rendering cannot be performed, document the reason in the final work summary or milestone notes.

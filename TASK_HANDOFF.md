@@ -1,26 +1,33 @@
 # Task handoff
 
-Status: completed (IDEA-0031 concise writing)
+Status: completed (IDEA-0027 document and subproject folders)
 Date: 2026-11-08
 
 ## Outcome
 
-Implement TVDR-0084 with a brief rule in AGENTS.md and adapted guidance in
-[STYLE_GUIDE.md](STYLE_GUIDE.md): write as long as needed and as short as possible,
-with understanding first. Essential reasoning, evidence, instructions and domain
-limits remain. CHANGELOG.md records the change. No source work remains.
+TVDR-0085 replaces mandatory format folders with shallow document/subproject
+folders in REPOSITORY.md and the existing setup, context, feedback, output and
+Quarto guides. Companion formats stay together. Both README languages agree.
+SYNCHRONIZED_STORAGE.md routes to the local rule. _quarto.yml now uses
+output/website for the coherent site tree. Shared renders use --no-clean or
+isolated staging, with collision and preservation checks. No source work remains.
 
 ## Evidence and limits
 
-Changed hunks and their meaning were reviewed against the existing local guidance;
-the resident guide link resolves. Procedural steps and bilingual meaning remain intact.
-No skill changed; skill validation is not applicable. Full-family, whitespace,
-render, runtime and milestone gates were not needed or run. Source review does
-not prove future agent adherence.
+Quarto 1.9.38 rendered both public template entry pages in an isolated temp
+fixture at output/website. An invented default project rendered HTML, DOCX,
+then HTML again with --no-clean in output/handbook. The other format's hash,
+same-folder notes and unrelated output remained unchanged. No legacy site path
+was produced. Current guidance, bilingual meaning, links and ignore rules pass
+focused checks; historical idea/changelog narratives remain unchanged.
+
+The unchanged Cosmo theme could not fetch its Google Fonts resource; this does
+not fail destination checks but leaves full offline presentation unqualified.
+No PDF render, visual inspection, full-family, whitespace or milestone gate was
+needed or run. No skill changed; skill validation is not applicable.
 
 ## Continuation and versioning
 
-Existing-project adoption is separately selected. Prior configuration and Git-route
-work remains intact; no staging selection was changed. This source change grants
-no Git, publication, configuration or protected-access authority. Later versioning
-uses live repository state and repository/action-specific authorization.
+Existing projects/files were not migrated or cleaned. Prior work and staging
+selections remain intact. No Git mutation or publication was performed. Later
+versioning uses live state and repository/action-specific authority.

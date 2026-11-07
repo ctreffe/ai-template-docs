@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Group companion outputs by document or subproject under TVDR-0085 instead
+  of mandatory format folders. Use output/website for the site and preserve
+  other formats during rendering; align setup, review and bilingual guidance.
+  Existing-project migration and cleanup remain separately selected.
+
 - Adopt purpose-led concise writing under TVDR-0084: understanding comes first,
   with a brief resident rule and local guidance preserving essential reasoning,
   evidence, instructions and domain limits. Existing-project adoption is separate.
