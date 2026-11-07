@@ -51,10 +51,18 @@ enabled = true
    fully restarts Desktop and restores the original mode if needed. In a fresh
    ordinary tool turn, confirm the recovered configuration and scope.
 
-Routine checks use declared permissions. Governance handles specific behavior
-questions through separately approved invented-only tests. Local command scope
+Routine scope checks use declared permissions. Required workflow checks use
+the procedure below; unresolved behavior questions go to Governance for
+separately scoped invented-only tests. Local command scope
 does not establish isolation for other tools, devices or approved escalation.
 
 See the [permission profile](https://learn.chatgpt.com/docs/permissions) and
 [Desktop sandbox](https://learn.chatgpt.com/docs/sandboxing) documentation for
 the supported settings and controls.
+
+## Required workflows
+
+Complete the [usability procedure](profile-usability.md) alongside the selected
+profile setup. Keep missing authority or failed required operations pending.
+Domain-specific credential and execution boundaries remain authoritative.
+
