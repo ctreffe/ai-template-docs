@@ -15,6 +15,11 @@ boundaries; technical recovery does not certify document correctness.
 
 ## Reuse and recover
 
+For Git failures, consult [GIT_TRANSPORT.md](../../../GIT_TRANSPORT.md)
+before retrying or handing execution back to the maintainer. Check both
+the launcher and transport against current operation-specific evidence;
+retain verified route updates there and link them from the failure record.
+
 Search `TROUBLESHOOTING.md` for the observed signature before repeating a failed
 approach. Read only a matching compact entry and relevant host-local facts.
 Consult only the matching section in `TROUBLESHOOTING_DETAILS.md` if needed to

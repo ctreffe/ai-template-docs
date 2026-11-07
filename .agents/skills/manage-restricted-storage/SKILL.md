@@ -5,6 +5,13 @@ description: Configure, confirm or roll back a project-local Codex profile for c
 
 # Manage Restricted Storage
 
+This skill owns protection design and qualification. Route every selected
+config edit through [manage-codex-config](../manage-codex-config/SKILL.md).
+Pass the approved profile delta and any pending initialization transaction;
+reuse one original-state/recovery record and combine changes before restart.
+Do not call start-project or create a second config writer. Preserve local
+domain boundaries and the profile verification requirements below.
+
 Apply AGENTS.md and the [input rules](../../../input/README.md). Use the
 [profile procedure](references/codex-permissions.md) for an approved setup,
 activation check or rollback. Confirm the exact project, scope and missing

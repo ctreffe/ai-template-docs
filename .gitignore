@@ -65,3 +65,10 @@ yarn-error.log*
 **/*.quarto_ipynb
 
 /.quarto/
+
+# Non-secret device-specific Git route bindings and evidence
+/GIT_TRANSPORT.local.md
+
+# Approved local Codex configuration transaction state
+/CODEX_CONFIG.local.md
+/.codex/config-recovery/

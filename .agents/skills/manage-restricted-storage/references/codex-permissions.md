@@ -1,5 +1,11 @@
 # Project-local Codex profile
 
+Use [manage-codex-config](../../manage-codex-config/SKILL.md) for composing,
+validating, applying and recovering the selected config delta. The original
+state and backup below are the shared transaction, not a second snapshot.
+Keep this procedure's protection, full-restart and domain-specific recovery
+requirements; the config skill supplies no broader access or activation.
+
 ## Keep enough to restore
 
 Confirm the exact project-local `.codex/config.toml` and current Desktop mode.
