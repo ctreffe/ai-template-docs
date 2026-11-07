@@ -75,6 +75,12 @@ Resident contract.
   setup/storage deltas; one owner preserves existing settings and recovery.
   Ordinary task entry does not configure the client.
 
+## Writing
+
+Write as long as needed and as short as possible for the purpose and audience.
+Understanding comes first; retain essential reasoning, evidence and instructions.
+See [STYLE_GUIDE.md](STYLE_GUIDE.md) for details and domain limits.
+
 ## Validation
 
 Codex skill edits use `scripts/Test-CodexSkill.ps1`; on first use follow
