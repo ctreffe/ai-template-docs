@@ -1,33 +1,38 @@
 # Task handoff
 
-Status: completed (IDEA-0027 document and subproject folders)
+Status: completed (IDEA-0032 missions, maintainer control and transparency)
 Date: 2026-11-08
 
 ## Outcome
 
-TVDR-0085 replaces mandatory format folders with shallow document/subproject
-folders in REPOSITORY.md and the existing setup, context, feedback, output and
-Quarto guides. Companion formats stay together. Both README languages agree.
-SYNCHRONIZED_STORAGE.md routes to the local rule. _quarto.yml now uses
-output/website for the coherent site tree. Shared renders use --no-clean or
-isolated staging, with collision and preservation checks. No source work remains.
+TVDR-0087 implements the maintainer-supplied mission in this source template.
+Maintainer domain control and truthful human-AI disclosure are shared principles.
+COLLABORATION.md owns bounded mission-alignment assessment; selected reviews,
+retrospectives and initialization reference it or the local setup contract.
+Both README languages retain explicit collaboration disclosure and mission links.
+The mission retains Quarto multi-format output, multilingual document contexts,
+research and the central annotation-based Review-Revision Workflow. Existing
+technical review-document remains distinct from scientific review.
+No selected source implementation work remains.
 
 ## Evidence and limits
 
-Quarto 1.9.38 rendered both public template entry pages in an isolated temp
-fixture at output/website. An invented default project rendered HTML, DOCX,
-then HTML again with --no-clean in output/handbook. The other format's hash,
-same-folder notes and unrelated output remained unchanged. No legacy site path
-was produced. Current guidance, bilingual meaning, links and ignore rules pass
-focused checks; historical idea/changelog narratives remain unchanged.
+Changed source, domain boundaries and bilingual meaning were reviewed. All 21
+changed skills passed their owning wrappers with existing pinned PyYAML 6.0.3;
+no installation occurred. Retrospective contracts, skill topology and Governance
+content checks passed. Selected link checks passed 807 targets across 74 files;
+13 pre-existing anchors outside selected content remain unverified. TVDR-0087
+records scenarios, acceptance limits and the repaired TVDR-0085 heading mismatch.
 
-The unchanged Cosmo theme could not fetch its Google Fonts resource; this does
-not fail destination checks but leaves full offline presentation unqualified.
-No PDF render, visual inspection, full-family, whitespace or milestone gate was
-needed or run. No skill changed; skill validation is not applicable.
+Source assessment is not a live review, retrospective, initialization or native
+isolation trial. Domain runtime, rendering, whitespace, full-family, release
+and milestone gates were not needed or run. Existing derived projects remain
+outside adoption; missions do not grant data access or broader action authority.
 
 ## Continuation and versioning
 
-Existing projects/files were not migrated or cleaned. Prior work and staging
-selections remain intact. No Git mutation or publication was performed. Later
-versioning uses live state and repository/action-specific authority.
+Prior IDEA-0028 work and Analysis IDEA-0002 remain preserved. During source
+implementation, no Git mutation, profile change or publication was performed.
+Later versioning uses live state
+and repository/action-specific authority. Existing-project adoption and any
+Analysis review-code implementation remain separately selected tasks.

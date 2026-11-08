@@ -4,6 +4,15 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Define the maintainer-supplied template mission under TVDR-0087. Preserve
+  domain control and transparent human-AI disclosure; capture concrete project
+  missions and assess alignment in selected reviews and retrospectives.
+
+- Preserve the chat's project anchor and use project-local temporary worktrees
+  under TVDR-0086. Check tool side effects, containment and ignore coverage;
+  exclude worktrees from generic cleanup and stop on unexpected context drift.
+  Existing-project adoption and actual Git/worktree actions remain separate.
+
 - Group companion outputs by document or subproject under TVDR-0085 instead
   of mandatory format folders. Use output/website for the site and preserve
   other formats during rendering; align setup, review and bilingual guidance.

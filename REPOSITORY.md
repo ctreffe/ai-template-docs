@@ -6,6 +6,14 @@ Use `start-task` for lean bounded entry and `TASK_HANDOFF.md` for current task
 state. Invoke `$review-project` explicitly to reconcile comprehensive project,
 documentation and read-only Git evidence.
 
+## Temporary Worktree Exception
+
+Ordinary disposable/never-versioned temp rules exclude Git worktrees.
+Their container stays ignored by the parent checkout; source versioning inside
+follows normal repository authority. Do not clean them as scratch or promote
+them to materials/. Follow [Project Anchor and Temporary Worktrees](COLLABORATION.md#project-anchor-and-temporary-worktrees)
+for placement, access, preflight, recovery and separately authorized removal.
+
 ## Document and subproject folders
 
 Within each applicable role and access root, prefer shallow folders named for

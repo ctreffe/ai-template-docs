@@ -7,6 +7,9 @@
 > [!NOTE]
 > **AI Collaboration**
 >
+> This repository is developed and maintained through human-AI collaboration.
+> Final domain judgment remains with the maintainer.
+>
 > This repository maintains the AI Documentation Template.
 >
 > The AI Documentation Template is the documentation-oriented specialization of the AI template family.
@@ -43,6 +46,9 @@
 - [License](#license)
 
 ## Overview
+
+The [template mission](PHILOSOPHY.md#template-mission) defines its purpose,
+expected outcomes and boundaries. Concrete project goals remain maintainer-owned.
 
 The AI Documentation Template is a starting point for technical documentation projects that require explicit context, clear ownership, reproducible collaboration, documented decisions and reviewable publication milestones. It supports user guides, administrator guides, tutorials, operating procedures, migration and troubleshooting guides, technical concepts, architecture documentation and mixed documentation sites.
 
@@ -257,6 +263,12 @@ Synchronized files remain external storage; synchronization is not Git
 versioning, backup, assistant access or publication approval.
 
 ## Temporary Working Files
+
+Temporary Git worktrees are a separate exception: keep them under project-local
+ignored `temp/`, preferably `temp/worktrees/`, preserve the chat context, and exclude them
+from generic cleanup. Source versioning inside follows normal Git authority;
+see [the worktree contract](COLLABORATION.md#project-anchor-and-temporary-worktrees).
+The following intermediate-file rules do not replace that contract.
 
 Use `temp/` for disposable documentation intermediates. All contents outside
 `temp/restricted/` are assistant-readable; that restricted directory must not

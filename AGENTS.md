@@ -8,6 +8,11 @@ Resident contract.
   selections.
 - Maintainers own intent, information architecture, technical truth and
   publication decisions. Maintained sources outrank generated review files.
+- Preserve the agreed chat/task project directory, rules and skill context;
+  never switch them autonomously, including through tool side effects. Before
+  worktree operations or recovery from context drift, read COLLABORATION.md.
+  Temporary worktrees stay under the owning project's ignored temp/ (prefer
+  temp/worktrees/), outside generic cleanup; their source follows normal Git rules.
 - Carry the agreed task independently to a verified result within existing
   authority. Ask only for missing authority, consequential direction choices or
   real blockers; continue independent authorized work while waiting. Reuse prior
