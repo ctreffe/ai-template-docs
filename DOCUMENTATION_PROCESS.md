@@ -163,8 +163,10 @@ harmonization; reusable collaboration lessons may become template candidates.
 ## 10. Milestone closure
 
 Build the milestone through small `docs:`, `fix:` or other appropriate regular
-commits as reviewable steps become complete. Update `CHANGELOG.md`, `VERSION`,
-project context and relevant decision records only when closing the milestone.
+commits as reviewable steps become complete. Keep project and document context,
+accepted Decision Records and relevant Unreleased changelog entries current as
+the work changes them. At milestone closure, synchronize `VERSION`, the release
+changelog and completion metadata with the reviewed final state.
 Use a separate descriptive milestone commit summary that includes the completed
 version number and provide a description matching the closure diff.
 

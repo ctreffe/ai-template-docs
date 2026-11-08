@@ -60,9 +60,11 @@ research with a saved report; frame concrete questions before searching.
 Invoke `$add-document`
 explicitly when an initialized project gains a maintained document; it must not
 reopen project initialization or silently replace project-wide decisions.
-For annotated review, invoke `revise-document`; invoke `render-document`
-explicitly for a requested artifact or when necessary evidence is accepted as
-part of the task. A compact versioned `TASK_HANDOFF.md`
+For annotated review, invoke `revise-document`. Use `render-document` when an
+artifact is requested or rendering supplies necessary evidence for the selected
+task or milestone; the maintainer need not name the skill separately. Source
+edits alone do not trigger rendering, and visual inspection remains separately
+explicit. A compact versioned `TASK_HANDOFF.md`
 preserves accepted decisions, exact sources, generated evidence, checks and the
 next action across context or device changes.
 

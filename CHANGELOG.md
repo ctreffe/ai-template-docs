@@ -4,6 +4,14 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+## [0.9.0] - 2026-11-08
+
+- Keep current project/document context, accepted decisions and Unreleased
+  history updated during work; reserve release metadata for milestone closure.
+  Clarify task/evidence-driven rendering without separate skill-name invocation;
+  visual inspection remains explicitly selected. Simplify initialization routing
+  while preserving document contexts, bilingual guides and profile gates.
+
 - Assess coherent commit packages before staging in both commit skills under
   TVDR-0088. Preserve existing selections, validate meaningful intermediate
   states and retain one final milestone closure/tag; existing-project adoption
