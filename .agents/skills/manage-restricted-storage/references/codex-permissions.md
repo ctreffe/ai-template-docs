@@ -17,6 +17,16 @@ untracked and ignored before storing private settings. Preserve existing
 recovery records. If the change could prevent startup or tool access, arrange
 bounded independent recovery before applying it.
 
+## Validate the candidate before saving
+
+Use the configuration owner's
+[validation procedure](../../../../CODEX_CONFIGURATION.md#validate-before-saving)
+for the complete candidate, effective default, legacy/layer conflicts and safe
+client-load check. Preserve a valid approved default. With a first named profile
+and no effective default, establish the intended baseline explicitly before
+saving; unresolved intent or loading leaves setup pending. Do not silently
+select the restricted profile. Retain separate activation and usability gates.
+
 ## Prepare the approved change
 
 Name the profile `<full-repository-slug>-restricted` and extend the approved
@@ -31,7 +41,13 @@ a restriction or a governing rule requires one. Keep approved network rules
 when changing an existing profile. Access and transmission remain separately
 authorized. Adapt this example to the selected project.
 
+The example assumes the approved existing default is `:workspace`. Keep a
+different valid default instead; these root keys precede every table.
+
 ```toml
+# Preserve this baseline only when it is the approved default.
+default_permissions = ":workspace"
+
 [permissions."example-repository-restricted"]
 extends = ":workspace"
 

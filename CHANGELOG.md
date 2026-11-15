@@ -4,6 +4,11 @@ All notable changes to this template will be documented in this file.
 
 ## [Unreleased]
 
+- Require an approved effective permission-profile default and safe client-load
+  validation before saving configuration. Keep required local and authenticated
+  remote Git operations in setup acceptance, with explicit exclusions and
+  per-operation evidence; preserve domain and action authority.
+
 ## [0.9.0] - 2026-11-08
 
 - Keep current project/document context, accepted decisions and Unreleased
