@@ -171,7 +171,7 @@ accepted into document prose.
 
 ## Collaboration Skills
 
-Skills are scoped workflows in [`.agents/skills/`](.agents/skills/). They guide
+Skills are scoped workflows in [`.agents/skills/`](.agents/skills). They guide
 the agent through a particular task and load the relevant repository guidance.
 Invoke a skill in chat with `$skill-name`, for example
 `$review-project`. The linked skill files describe each full workflow.
@@ -368,7 +368,7 @@ Choose the record type by decision subject:
 - **PDR — Project Decision Record:** project scope, roadmap, collaboration, privacy, source governance or repository structure.
 - **ADR — Architecture Decision Record:** Quarto structure, build pipeline, tooling, output model, automation or another durable technical documentation-system decision.
 
-Templates live in [decisions/](decisions/). Create a record only when the rationale and consequences will matter to future maintainers; ordinary wording changes and routine corrections do not need one.
+Templates live in [decisions/](decisions). Create a record only when the rationale and consequences will matter to future maintainers; ordinary wording changes and routine corrections do not need one.
 
 ## Repository Structure
 

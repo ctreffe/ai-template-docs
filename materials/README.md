@@ -72,3 +72,10 @@ task. Record a missing report as an evidence gap; never invent its contents or
 assessment. Check only needed artifacts, not every catalog or project. Use
 [SYNCHRONIZED_STORAGE.md](../SYNCHRONIZED_STORAGE.md) when setup or a mapping
 problem actually needs attention.
+
+## Ordinary synchronized root
+
+Use repository-root storage.local.json for the ordinary external project area;
+input/materials PATHS.local.md files are for independent sources or explicit legacy
+migration only. Preserve domain overrides and existing access/provider limits.
+See SYNCHRONIZED_STORAGE.md at the repository root.
